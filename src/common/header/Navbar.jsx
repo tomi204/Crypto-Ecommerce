@@ -3,13 +3,22 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <navbar>
+    <nav className="navbar">
       <ul>
-        <li>Home</li>
-        <li>products</li>
-        <li>Contact</li>
+        <a href="/home">
+          <li>HOME</li>
+        </a>
+        <a href="">
+          <li>PRODUCTOS</li>
+        </a>
+        <a href="">
+          <li>SERVICIO TECNICO</li>
+        </a>
+        <a href="">
+          <li>NOSOTROS</li>
+        </a>
       </ul>
-    </navbar>
+    </nav>
   );
 }
 export default Navbar;

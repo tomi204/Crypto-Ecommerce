@@ -18,6 +18,7 @@ function Navbar() {
           <li>NOSOTROS</li>
         </a>
       </ul>
+      <i className="cart-outline"></i>
     </nav>
   );
 }

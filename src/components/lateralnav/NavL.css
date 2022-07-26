@@ -1,0 +1,16 @@
+.navl {
+  justify-content: center;
+  background-color: rgb(73, 69, 69);
+  max-width: 50px;
+  height: 150px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  list-style: none;
+  gap: 150px;
+}
+.li-n {
+  display: list-item;
+  justify-items: center;
+  align-items: center;
+  display: list-item;
+}

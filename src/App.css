@@ -24,20 +24,6 @@ span {
   font-size: 40px;
 }
 
-.dark-mode {
-  background-color: #1a1919;
-  color: #999;
-  height: 100%;
-  transition: background-color 0.25s ease-in-out;
-}
-
-.light-mode {
-  background-color: #fff;
-  color: #333;
-  height: 100%;
-  transition: background-color 0.25s ease-in-out;
-}
-
 .container {
   display: flex;
   justify-content: center;

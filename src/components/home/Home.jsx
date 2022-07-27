@@ -1,12 +1,12 @@
 import React from "react";
-import NavL from "../lateralnav/NavL";
+import "./Home.css";
+import SlideCard from "./ItemList";
 function Home() {
   return (
     <section className="home">
       <div className="">
-        <h1>hola mundo</h1>
+        <SlideCard />
       </div>
-      <NavL></NavL>
     </section>
   );
 }

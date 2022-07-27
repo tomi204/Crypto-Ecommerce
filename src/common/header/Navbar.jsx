@@ -1,13 +1,12 @@
 import React from "react";
+import Cart from "../cart/Cart";
 import "./Navbar.css";
-import { FaShoppingCart } from "react-icons/fa";
-
 function Navbar() {
   return (
     <nav className="navbar">
       <ul>
         <a href="/home">
-          <li>HOME</li>
+          <li>INICIO</li>
         </a>
         <a href="">
           <li>PRODUCTOS</li>
@@ -18,8 +17,8 @@ function Navbar() {
         <a href="">
           <li>NOSOTROS</li>
         </a>
-        <FaShoppingCart className="carrito"></FaShoppingCart>
       </ul>
+      <Cart />
     </nav>
   );
 }

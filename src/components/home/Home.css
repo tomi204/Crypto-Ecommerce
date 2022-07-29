@@ -6,3 +6,17 @@
   width: 450px;
   height: 450px;
 }
+.boxflex_slider_containertop {
+  margin-top: 150px;
+}
+.btn-primary {
+  color: rgb(255, 255, 255);
+  background-color: rgb(53, 46, 87);
+  border-radius: 7px;
+  border-style: solid;
+  font-size: smaller;
+}
+.box {
+  background-color: rgb(177, 172, 172);
+  justify-content: center;
+}

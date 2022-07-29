@@ -4,7 +4,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <ul>
+      <ul className="ul-n">
         <a href="/home">
           <li>INICIO</li>
         </a>

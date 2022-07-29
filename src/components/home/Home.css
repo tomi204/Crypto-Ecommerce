@@ -1,22 +1,27 @@
 .home {
   max-height: 1000px;
   max-width: 1000px;
+  justify-content: center;
+  align-items: center;
 }
 .img-home {
-  width: 450px;
-  height: 450px;
+  display: flex;
+  left: 150px;
+  width: 250px;
+  height: 220px;
 }
-.boxflex_slider_containertop {
-  margin-top: 150px;
-}
-.btn-primary {
-  color: rgb(255, 255, 255);
-  background-color: rgb(53, 46, 87);
-  border-radius: 7px;
-  border-style: solid;
-  font-size: smaller;
-}
+
 .box {
-  background-color: rgb(177, 172, 172);
+  display: flex;
+  margin-left: 480px;
+  margin-top: 90px;
+  max-width: 450px;
+  font-size: larger;
+}
+
+.left {
+  color: white;
+  align-items: center;
   justify-content: center;
+  width: 60%;
 }

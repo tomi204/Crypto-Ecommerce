@@ -4,9 +4,7 @@ import SlideCard from "./ItemList";
 function Home() {
   return (
     <section className="home">
-      <div className="">
-        <SlideCard />
-      </div>
+      <SlideCard />
     </section>
   );
 }

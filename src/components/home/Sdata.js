@@ -2,7 +2,7 @@ const Sdata = [
   {
     id: 1,
     title: "PC GAMING AL MEJOR PRECIO",
-    desc: "Placa de video 8GB RTX 3070",
+    desc: "I7 11700K + Placa de video 8GB RTX 3070",
     cover: "./images/SlideCard/slide-1.png",
   },
   {

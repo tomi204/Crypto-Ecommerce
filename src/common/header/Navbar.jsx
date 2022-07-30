@@ -1,6 +1,6 @@
 import React from "react";
-import Cart from "../cart/Cart";
 import "./Navbar.css";
+import { FaShoppingCart } from "react-icons/fa";
 function Navbar() {
   return (
     <nav className="navbar">
@@ -18,7 +18,9 @@ function Navbar() {
           <li>NOSOTROS</li>
         </a>
       </ul>
-      <Cart />
+      <a href="">
+        <FaShoppingCart></FaShoppingCart>
+      </a>
     </nav>
   );
 }

@@ -1,15 +1,16 @@
 import "./App.css";
 import Home from "./components/home/Home";
-import Header from "./common/header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./common/header/Navbar";
+import NavL from "./components/lateralnav/NavL";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Navbar />
         <Home />
-        <container texto={"hola"} />
+        <NavL />
       </div>
     </Router>
   );

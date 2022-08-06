@@ -4,23 +4,30 @@ import "./Cart.css";
 
 export default function Contador({ inicial, stock }) {
   const [contador, setContador] = useState(inicial);
+
   const agregarAlContador = () =>
     contador >= stock ? alert : setContador(contador + 1);
   const restarAlContador = () =>
     contador > 0 ? setContador(contador - 1) : null;
+  const reset = () => (contador > 0 ? setContador((contador = 0)) : null);
 
   return (
     <div className="d-flex flex-row justify-content-center mt-2">
       <button
         className="btn btn-outline-info p-2 boton-cant"
         onClick={restarAlContador}
-      ></button>
+      >
+        -
+      </button>
       <p className="p-2">{contador}</p>
       <button
         className="btn btn-outline-info p-2 boton-cant"
         onClick={agregarAlContador}
       >
         +
+      </button>
+      <button className="btn btn-outline-info p-2 boton-cant" onClick={reset}>
+        reset
       </button>
     </div>
   );

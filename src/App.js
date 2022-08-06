@@ -1,18 +1,26 @@
 import "./App.css";
-import Home from "./components/home/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./common/header/Navbar";
-import NavL from "./components/lateralnav/NavL";
-
+import Home from "./components/Home/Home";
+import {
+  BrowserRouter as Router,
+  Route,
+  BrowserRouter,
+  Routes,
+} from "react-router-dom";
+import Navbar from "./components/Header/Navbar";
+import NavL from "./components/Lateralnav/NavL";
+import Contador from "./components/Cart-items/Cart";
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <BrowserRouter>
         <Navbar />
-        <Home />
         <NavL />
-      </div>
-    </Router>
+        <Contador />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,34 +1,28 @@
 import React from "react";
 import { useState } from "react";
 import "./Cart.css";
-
-export default function Contador({ inicial, stock }) {
-  const [contador, setContador] = useState(inicial);
-
+export default function Cart(props) {
+  const [contador, setContador] = useState(1);
+  const stock = 20;
   const agregarAlContador = () =>
     contador >= stock ? alert : setContador(contador + 1);
   const restarAlContador = () =>
     contador > 0 ? setContador(contador - 1) : null;
-  const reset = () => (contador > 0 ? setContador((contador = 0)) : null);
+  const resetAlContador = () =>
+    contador > 0 ? setContador(contador === 0) : null;
 
   return (
-    <div className="d-flex flex-row justify-content-center mt-2">
-      <button
-        className="btn btn-outline-info p-2 boton-cant"
-        onClick={restarAlContador}
-      >
+    <section className="Carrito">
+      <button className="btnN" onClick={restarAlContador}>
         -
       </button>
-      <p className="p-2">{contador}</p>
-      <button
-        className="btn btn-outline-info p-2 boton-cant"
-        onClick={agregarAlContador}
-      >
+      <p className="Contador">{contador}</p>
+      <button className="btnA" onClick={agregarAlContador}>
         +
       </button>
-      <button className="btn btn-outline-info p-2 boton-cant" onClick={reset}>
+      <button className="btnR" onClick={resetAlContador}>
         reset
       </button>
-    </div>
+    </section>
   );
 }

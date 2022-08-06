@@ -1,4 +1,24 @@
-.boton-cant {
-  width: 45px;
-  height: 55px;
+.carrito {
+  color: aliceblue;
+  background-color: white;
+  max-width: 1000px;
+  max-height: 500px;
+}
+.btnN {
+  background-color: white;
+  max-width: 55px;
+  max-height: 35px;
+}
+.btnR {
+  background-color: white;
+  max-width: 55px;
+  max-height: 35px;
+}
+.btnA {
+  background-color: white;
+  max-width: 55px;
+  max-height: 35px;
+}
+.Contador {
+  color: aliceblue;
 }

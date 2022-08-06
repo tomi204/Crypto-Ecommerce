@@ -1,4 +1,4 @@
-const producto = [
+const SProducto = [
   {
     id: 1,
     title: "PC GAMING AL MEJOR PRECIO",
@@ -28,4 +28,4 @@ const producto = [
     stock: 5,
   },
 ];
-export default Sdata;
+export default SProducto;

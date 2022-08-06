@@ -1,8 +1,8 @@
 import React from "react";
-import producto from "./Producto";
+import SProducto from "./SProducto";
 import "./index.css";
 export const productos = () => {
-  producto.map((value, index) => {
+  SProducto.map((value, index) => {
     return (
       <>
         <section className="section-products">

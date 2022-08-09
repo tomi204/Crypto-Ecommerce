@@ -37,3 +37,10 @@ export const getProductos = () => {
     }, 2000)
   );
 };
+export const getProducById = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve;
+    });
+  });
+};

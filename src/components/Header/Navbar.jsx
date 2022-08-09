@@ -9,13 +9,13 @@ function Navbar() {
         <NavLink to={"./Home"}>
           <li>INICIO</li>
         </NavLink>
-        <NavLink to={"./Productos"}>
+        <NavLink to={"/Productos"}>
           <li>PRODUCTOS</li>
         </NavLink>
         <NavLink to={"/serviciotecnico"}>
           <li>SERVICIO TECNICO</li>
         </NavLink>
-        <NavLink to={"./nosotros"}>
+        <NavLink to={"/nosotros"}>
           <li>NOSOTROS</li>
         </NavLink>
       </ul>

@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Header/Navbar";
 import NavL from "./components/Lateralnav/NavL";
-import { Productos } from "./components/Productos/Productos";
+import Productos from "./components/Productos/Productos";
 import Cart from "./components/Cart-items/Cart";
 function App() {
   return (
@@ -16,11 +16,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <NavL />
-
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/productos" element={<Productos />} />
+          <Route path="/Productos" element={<Productos />} />
         </Routes>
       </BrowserRouter>
     </div>

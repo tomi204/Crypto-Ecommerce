@@ -29,3 +29,11 @@ const SProducto = [
   },
 ];
 export default SProducto;
+
+export const getProductos = () => {
+  return new Promise(resolve, resject)(
+    setTimeout(() => {
+      resolve(SProducto);
+    }, 2000)
+  );
+};

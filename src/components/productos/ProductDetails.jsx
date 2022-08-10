@@ -1,19 +1,18 @@
 import React from "react";
 import SProducto from "./SProducto";
+import "./productosC.css";
 const ProductDetails = () => {
   {
-    SProducto.map((value, index) => {
+    SProducto.find((value, index) => {
       return (
-        <>
-          <div className="box" key={index}>
-            <div className="left">
-              <h1>{value.title}</h1>
-              <p>{value.desc}</p>
-              <h2>{value.stock}</h2>
-              <img src={value.cover} alt="" className="img-home" />
-            </div>
+        <div className="productos" key={index}>
+          <div className="all">
+            <h1>{value.title}</h1>
+            <p>{value.desc}</p>
+            <h2>{value.stock}</h2>
+            <img src={value.cover} alt="" className="img-home" />
           </div>
-        </>
+        </div>
       );
     });
   }

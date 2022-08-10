@@ -1,13 +1,11 @@
 import React from "react";
-import "./index.css";
+import "./productosC.css";
 import ProductDetails from "./ProductDetails";
-const Productos = () => {
+function Productos() {
   return (
-    <>
-      <section className="section-products">
-        <ProductDetails />
-      </section>
-    </>
+    <section className="section-products">
+      <ProductDetails />
+    </section>
   );
-};
+}
 export default Productos;

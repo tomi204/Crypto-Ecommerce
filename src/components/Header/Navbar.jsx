@@ -9,9 +9,9 @@ function Navbar() {
         <NavLink to={"./Home"}>
           <li>INICIO</li>
         </NavLink>
-        <NavLink to={"/Productos"}>
+        <Link to={"./Productos"}>
           <li>PRODUCTOS</li>
-        </NavLink>
+        </Link>
         <NavLink to={"/serviciotecnico"}>
           <li>SERVICIO TECNICO</li>
         </NavLink>

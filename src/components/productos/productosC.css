@@ -1,0 +1,19 @@
+.productos {
+  display: flex;
+  margin-left: 480px;
+  margin-top: 90px;
+  max-width: 450px;
+  font-size: larger;
+  color: white;
+}
+.section-products {
+  min-width: 1200px;
+  min-height: none;
+  justify-content: center;
+}
+.img-home {
+  display: flex;
+  left: 150px;
+  width: 250px;
+  height: 220px;
+}

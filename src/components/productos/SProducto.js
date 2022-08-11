@@ -2,34 +2,36 @@ const SProducto = [
   {
     id: 1,
     category: 1,
-    title: "PC GAMING AL MEJOR PRECIO",
+    title: "PC GAMER",
     desc: "I7 11700K + Placa de video 8GB RTX 3070",
-    cover: "./images/SlideCard/slide-1.png",
+    cover:
+      "https://www.noticias3d.com/imagenes/noticias/202007/manticore01.png",
     stock: 20,
   },
   {
     id: 2,
     category: 1,
-    title: "Las Mejores Placas De Video",
-    desc: "Placa de video 3080",
+    title: "Placa de video 3080",
+    desc: "Una placa de video que corre cualquier juego de 10!",
     cover:
-      "https://http2.mlstatic.com/D_NQ_NP_754450-MLA48658120938_122021-O.jpg",
+      "https://gamerspit.com.ar/wp-content/uploads/2021/11/placa-de-video-msi-geforce-rtx-3090-ventus-3x-24g-450x450.png",
     stock: 20,
   },
   {
     id: 3,
     category: 2,
     title: "Notebook Gamer",
-    desc: "I7 9700K, RTX 3070 Y MAS",
-    cover: "./images/SlideCard/slide-3.png",
+    desc: "La mejor notebook para jugar la tenes aca!",
+    cover: "http://www.cdmarket.com.ar/image/0/600_750-400772_0011.png",
     stock: 10,
   },
   {
     id: 4,
     category: 2,
     title: "Monitor 240hz",
-    desc: "Monitores 144hz y 240hz",
-    cover: "./images/SlideCard/slide-4.png",
+    desc: "El mejor monitor del mundo lo tenes aca!",
+    cover:
+      "https://dlcdnwebimgs.asus.com/gain/D5DD887A-5390-44C6-9FB9-983A4A839CEC/w717/h525",
     stock: 5,
   },
 ];

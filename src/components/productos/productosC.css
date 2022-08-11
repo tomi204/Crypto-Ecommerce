@@ -2,14 +2,25 @@
   min-width: 1200px;
   min-height: 350px;
   justify-content: center;
-  background-color: white;
 }
 
 .div-product {
   color: rgb(0, 0, 0);
-  background-color: white;
+
   border-color: aqua;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.img-products {
+  max-width: 155px;
+  max-height: 125px;
 }
 .boton-detalles {
-  color: white;
+  background-color: white;
+  max-width: 55px;
+  max-height: 55px;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
 }

@@ -12,6 +12,7 @@ const ProductDetails = () => {
           <div>
             <h1>{value.title}</h1>
             <h1>{value.desc}</h1>
+            <h2>{value.stock}</h2>
             <img src={value.cover} alt="" className="img-home" />
           </div>
         );

@@ -12,7 +12,8 @@ const SProducto = [
     category: 1,
     title: "Las Mejores Placas De Video",
     desc: "Placa de video 3080",
-    cover: "./images/SlideCard/slide-2.png",
+    cover:
+      "https://http2.mlstatic.com/D_NQ_NP_754450-MLA48658120938_122021-O.jpg",
     stock: 20,
   },
   {

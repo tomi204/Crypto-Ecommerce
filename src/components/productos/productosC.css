@@ -4,12 +4,6 @@
   justify-content: center;
   background-color: white;
 }
-.img-home {
-  display: flex;
-  left: 150px;
-  width: 250px;
-  height: 220px;
-}
 
 .div-product {
   color: rgb(0, 0, 0);

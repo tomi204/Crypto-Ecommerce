@@ -1,8 +1,23 @@
 import React from "react";
 import SProducto from "./SProducto";
 import "./productosC.css";
+import { useParams } from "react-router-dom";
 const ProductDetails = () => {
-  return <div></div>;
+  let { id } = useParams();
+  let filtrado = SProducto.filter((item) => Number(item.id) === Number(id));
+  return (
+    <>
+      {filtrado.map((value) => {
+        return (
+          <div>
+            <h1>{value.title}</h1>
+            <h1>{value.desc}</h1>
+            <img src={value.cover} alt="" className="img-home" />
+          </div>
+        );
+      })}
+    </>
+  );
 };
 
 export default ProductDetails;

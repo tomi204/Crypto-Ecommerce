@@ -1,11 +1,24 @@
 import React from "react";
 import "./productosC.css";
 import ProductDetails from "./ProductDetails";
-function Productos() {
+import SProducto from "./SProducto";
+export default function Productos() {
   return (
     <section className="section-products">
-      <ProductDetails />
+      <div className="product-d">
+        {SProducto.map((value, index) => {
+          return (
+            <div className="div-product" key={index}>
+              <h1>{value.title}</h1>
+              <h2>{value.stock}</h2>
+              <button className="boton-detalles">
+                <Link to={`category/${value.id}`}></Link>
+              </button>
+              <img src={value.cover} alt="" className="img-home" />
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
-export default Productos;

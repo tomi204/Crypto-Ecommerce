@@ -1,6 +1,7 @@
 const SProducto = [
   {
     id: 1,
+    category: 1,
     title: "PC GAMING AL MEJOR PRECIO",
     desc: "I7 11700K + Placa de video 8GB RTX 3070",
     cover: "./images/SlideCard/slide-1.png",
@@ -8,6 +9,7 @@ const SProducto = [
   },
   {
     id: 2,
+    category: 1,
     title: "Las Mejores Placas De Video",
     desc: "Placa de video 3080",
     cover: "./images/SlideCard/slide-2.png",
@@ -15,6 +17,7 @@ const SProducto = [
   },
   {
     id: 3,
+    category: 2,
     title: "Notebook Gamer",
     desc: "I7 9700K, RTX 3070 Y MAS",
     cover: "./images/SlideCard/slide-3.png",
@@ -22,6 +25,7 @@ const SProducto = [
   },
   {
     id: 4,
+    category: 2,
     title: "Monitor 240hz",
     desc: "Monitores 144hz y 240hz",
     cover: "./images/SlideCard/slide-4.png",
@@ -30,17 +34,17 @@ const SProducto = [
 ];
 export default SProducto;
 
-export const getProductos = () => {
-  return new Promise(resolve, resject)(
-    setTimeout(() => {
-      resolve(SProducto);
-    }, 2000)
-  );
-};
-export const getProducById = (id) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve;
-    });
-  });
-};
+// export const getProductos = () => {
+//   return new Promise(resolve, resject)(
+//     setTimeout(() => {
+//       resolve(SProducto);
+//     }, 2000)
+//   );
+// };
+// export const getProducById = (id) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve;
+//     });
+//   });
+// };

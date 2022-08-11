@@ -1,19 +1,21 @@
-.productos {
-  display: flex;
-  margin-left: 480px;
-  margin-top: 90px;
-  max-width: 450px;
-  font-size: larger;
-  color: white;
-}
 .section-products {
   min-width: 1200px;
-  min-height: none;
+  min-height: 350px;
   justify-content: center;
+  background-color: white;
 }
 .img-home {
   display: flex;
   left: 150px;
   width: 250px;
   height: 220px;
+}
+
+.div-product {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-color: aqua;
+}
+.boton-detalles {
+  color: white;
 }

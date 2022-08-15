@@ -5,12 +5,10 @@
   transform: translateY(-50%);
   justify-content: center;
   align-items: flex-end;
-  background-color: #e41c1c;
   width: 40px;
   height: 150px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  list-style: none;
 }
 .li-n a {
   display: flex;

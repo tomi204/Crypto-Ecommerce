@@ -9,7 +9,7 @@ import {
 import Navbar from "./components/Header/Navbar";
 import NavL from "./components/Lateralnav/NavL";
 import Productos from "./components/Productos/Productos";
-import Cart from "./components/Cart-items/Cart";
+import Cart from "./components/CartItems/Cart";
 import { CartContext } from "./components/context/CartContext";
 import ProductDetails from "./components/Productos/ProductDetails";
 function App() {

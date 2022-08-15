@@ -6,10 +6,9 @@
 
 .div-product {
   color: rgb(0, 0, 0);
-
+  display: flex;
   border-color: aqua;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   color: white;
 }
 
@@ -19,11 +18,22 @@
 }
 .boton-detalles {
   background-color: white;
-  max-width: 55px;
+  max-width: 45px;
   max-height: 55px;
-  color: rgb(0, 0, 0);
   border-radius: 15px;
+  margin-top: 40px;
 }
 .list-item {
   color: white;
+  place-items: center;
+  align-items: center;
+}
+.img-details {
+  position: relative;
+  width: 350px;
+}
+.box-items {
+  align-items: baseline;
+  width: 450px;
+  height: 250px;
 }

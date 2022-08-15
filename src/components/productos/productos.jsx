@@ -9,11 +9,13 @@ export default function Productos() {
         {SProducto.map((value, index) => {
           return (
             <div className="div-product" key={index}>
-              <h1>{value.title}</h1>
-              <img src={value.cover} alt="" className="img-products" />
-              <Link to={`/category/${value.id}`}>
-                <button className="boton-detalles">Ver detalles</button>
-              </Link>
+              <div className="box-items">
+                <img src={value.cover} alt="" className="img-products" />
+                <h4>{value.title}</h4>
+                <Link to={`/category/${value.id}`}>
+                  <button className="boton-detalles">Ver detalles</button>
+                </Link>
+              </div>
             </div>
           );
         })}

@@ -18,9 +18,9 @@
 }
 .boton-detalles {
   background-color: white;
-  max-width: 45px;
-  max-height: 55px;
-  border-radius: 15px;
+  max-width: 75px;
+  max-height: 45px;
+  border-radius: 9px;
   margin-top: 40px;
 }
 .list-item {
@@ -33,7 +33,9 @@
   width: 350px;
 }
 .box-items {
-  align-items: baseline;
+  margin-top: 50px;
+  display: inline-flex;
+  justify-content: baseline;
   width: 450px;
   height: 250px;
 }

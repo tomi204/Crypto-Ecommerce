@@ -13,7 +13,7 @@ export default function Productos() {
                 <img src={value.cover} alt="" className="img-products" />
                 <h4>{value.title}</h4>
                 <Link to={`/category/${value.id}`}>
-                  <button className="boton-detalles">Ver detalles</button>
+                  <button className="boton-detalles">Ver Detalles</button>
                 </Link>
               </div>
             </div>

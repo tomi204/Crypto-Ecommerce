@@ -1,7 +1,6 @@
 const SProducto = [
   {
-    id: 1,
-    category: 1,
+    category: "Pc Armada",
     title: "PC GAMER",
     desc: "I7 11700K + Placa de video 8GB RTX 3070",
     cover:
@@ -9,8 +8,7 @@ const SProducto = [
     stock: 20,
   },
   {
-    id: 2,
-    category: 1,
+    category: "Placas de video",
     title: "Placa de video 3080",
     desc: "Una placa de video que corre cualquier juego de 10!",
     cover:
@@ -18,16 +16,14 @@ const SProducto = [
     stock: 20,
   },
   {
-    id: 3,
-    category: 2,
+    category: "Notebook",
     title: "Notebook Gamer",
     desc: "La mejor notebook para jugar la tenes aca!",
     cover: "http://www.cdmarket.com.ar/image/0/600_750-400772_0011.png",
     stock: 10,
   },
   {
-    id: 4,
-    category: 2,
+    category: "Monitores",
     title: "Monitor 240hz",
     desc: "El mejor monitor del mundo lo tenes aca!",
     cover:

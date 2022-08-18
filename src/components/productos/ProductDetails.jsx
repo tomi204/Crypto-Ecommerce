@@ -1,16 +1,18 @@
 import React from "react";
 import SProducto from "./SProducto";
 import "./productosC.css";
-import { useCartContext } from "../CartItems/CartContext";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Contador from "../CartItems/Contador";
+import { useState } from "react";
+
 const ProductDetails = () => {
+  const [goToCart, setCart] = useState(false);
   let { id } = useParams();
-  //const { addCart } = useCartContext;
-  // const onAdd = (quantity) => {
-  //  addCart(data, quantity);
-  //  };
+
+  const onAdd = () => {
+    setCart(true);
+  }
   let filtrado = SProducto.filter((item) => Number(item.id) === Number(id));
   return (
     <>
@@ -22,8 +24,11 @@ const ProductDetails = () => {
               <h3>{value.desc}</h3>
               <img src={value.cover} alt="" className="img-details" />
               <h2>{value.stock}</h2>
-              <Contador />
-              <Link to={"/Cart"}>Añadir al carrito</Link>
+              {goToCart ?
+                <Link to={"/Cart"}>Terminar la compra</Link>
+                :
+                <Contador onAdd={onAdd} />
+              }
             </div>
           </div>
         );
@@ -31,5 +36,6 @@ const ProductDetails = () => {
     </>
   );
 };
+;
 
 export default ProductDetails;

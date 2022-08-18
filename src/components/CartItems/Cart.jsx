@@ -14,16 +14,22 @@ export default function Cart(props) {
 
     return (
       <section className="Carrito">
-        <button className="btnN" onClick={restarAlContador}>
-          -
-        </button>
-        <p className="Contador">{contador}</p>
-        <button className="btnA" onClick={agregarAlContador}>
-          +
-        </button>
-        <button className="btnR" onClick={resetAlContador}>
-          reset
-        </button>
+        {/* <div className="productos-Carrito">
+             
+        </div> */}
+        <div className="carrito-SR">
+          <button className="btnN" onClick={restarAlContador}>
+            -
+          </button>
+          <p className="Contador">{contador}</p>
+          <button className="btnA" onClick={agregarAlContador}>
+            +
+          </button>
+
+          <button className="btnR" onClick={resetAlContador}>
+            reset
+          </button>
+        </div>
       </section>
     );
   }

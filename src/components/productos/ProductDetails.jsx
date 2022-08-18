@@ -17,7 +17,6 @@ const ProductDetails = () => {
               <h3>{value.desc}</h3>
               <img src={value.cover} alt="" className="img-details" />
               <h2>{value.stock}</h2>
-
               <Link to={"/Cart"}>Añadir al carrito</Link>
             </div>
           </div>

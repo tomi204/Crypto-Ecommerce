@@ -3,6 +3,7 @@ import "./productosC.css";
 import { Link } from "react-router-dom";
 import SProducto from "./SProducto";
 export default function Productos() {
+  console.log("Productos:", nombre);
   return (
     <section className="section-products">
       <div className="product-d">

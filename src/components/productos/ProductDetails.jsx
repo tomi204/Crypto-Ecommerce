@@ -13,7 +13,6 @@ const ProductDetails = () => {
     setCart(true);
     addCart(value, quantity);
   }
-  console.log(setCart)
   let filtrado = SProducto.filter((item) => Number(item.id) === Number(id));
   return (
     <>
@@ -24,11 +23,14 @@ const ProductDetails = () => {
               <h1>{value.title}</h1>
               <h3>{value.desc}</h3>
               <img src={value.cover} alt="" className="img-details" />
-              <h2>{value.stock}</h2>
+              <h2> ${value.price}</h2>
+              <h2>Hay {value.stock} en stock</h2>
+
               {goToCart ?
                 <Link to={"/Cart"}>Terminar la compra</Link>
                 :
                 <Contador onAdd={onAdd} />
+
               }
             </div>
           </div>

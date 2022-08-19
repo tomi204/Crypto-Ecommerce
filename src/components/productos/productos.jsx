@@ -11,10 +11,13 @@ export default function Productos() {
             <div className="div-product" key={index}>
               <div className="box-items">
                 <img src={value.cover} alt="" className="img-products" />
-                <h4>{value.title}</h4>
+                <h2>{value.title}</h2>
+
+                <h4>${value.price}</h4>
                 <Link to={`/category/${value.id}`}>
                   <button className="boton-detalles">Ver Detalles</button>
                 </Link>
+
               </div>
             </div>
           );

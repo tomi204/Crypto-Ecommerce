@@ -5,7 +5,7 @@ export default function Cart() {
   return (
     <section className="carrito-main">
       <div className="box-compra">
-        <Contador stock={5} />
+        <Contador />
       </div>
     </section>
   );

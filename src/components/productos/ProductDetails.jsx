@@ -5,14 +5,15 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Contador from "../CartItems/Contador";
 import { useState } from "react";
-
 const ProductDetails = () => {
   const [goToCart, setCart] = useState(false);
   let { id } = useParams();
 
-  const onAdd = () => {
+  const onAdd = (quantity) => {
     setCart(true);
+    addCart(value, quantity);
   }
+  console.log(setCart)
   let filtrado = SProducto.filter((item) => Number(item.id) === Number(id));
   return (
     <>

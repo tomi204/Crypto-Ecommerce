@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import Productos from "../Productos/Productos";
 import SProducto from "../Productos/SProducto";
 import { useParams } from "react-router-dom";
 import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";

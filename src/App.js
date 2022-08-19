@@ -7,7 +7,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Navbar from "./components/Header/Navbar";
-import NavL from "./components/Lateralnav/NavL";
+import NavL from "./components/LateralNav/NavL";
 import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import CartProvider, { CartContext } from "./components/CartItems/CartContext";

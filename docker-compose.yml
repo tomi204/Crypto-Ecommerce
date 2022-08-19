@@ -7,11 +7,4 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
-    volumes:
-      - ./public:/usr/src/app/public
-      - ./src:/usr/src/app/src
     restart: unless-stopped
-    environment:
-      - NODE_ENV=production
-      - NODE_PORT=3000
-      - CHOKIDAR_USEPOLLING=true

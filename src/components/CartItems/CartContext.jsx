@@ -1,8 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import Productos from "../Productos/Productos";
-import SProducto from "../Productos/SProducto";
 import { useParams } from "react-router-dom";
 import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";
 
@@ -19,8 +17,8 @@ const CartProvider = ({ children }) => {
 
   const removeP = (id) => setCart(cart.filter((SProducto) => SProducto.id !== id));
 
-  const addCart = (prod, newQuantity) => {
-    newCart = cart.filter((prod) => SProducto.id !== SProducto.id);
+  const addCart = (SProducto, newQuantity) => {
+    newCart = cart.filter((SProducto) => SProducto.id !== SProducto.id);
 
     newCart.push({ ...SProducto, quantity: newQuantity });
     setCart(newCart);
@@ -42,8 +40,7 @@ const CartProvider = ({ children }) => {
       totalPrice,
       totalProducts,
       cart
-    }}
-    >
+    }}>
       {children}
     </CartContext.Provider>
   );

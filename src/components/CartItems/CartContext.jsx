@@ -19,7 +19,6 @@ const CartProvider = ({ children }) => {
 
   const addCart = (SProducto, newQuantity) => {
     newCart = cart.filter((SProducto) => SProducto.id !== SProducto.id);
-
     newCart.push({ ...SProducto, quantity: newQuantity });
     setCart(newCart);
   };

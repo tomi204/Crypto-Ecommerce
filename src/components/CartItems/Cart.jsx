@@ -1,10 +1,10 @@
 import React from "react";
 import "./Cart.css";
-import { useCartContext } from "./CartContext";
+import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 import cartItem from "./CartItem";
 export default function Cart() {
-  const { cart, totalPrice } = useCartContext();
+  const { cart, removeFromCart, removeAll, totalPrice } = useContext(CartContext);
   if (cart.length === 0) {
     return (
       <>
@@ -20,7 +20,7 @@ export default function Cart() {
         <h1>Estos son tus productos</h1>
 
         {
-          cart.map(SProducto => <cartItem key={SProducto.id} SProducto={SProducto} />)
+          cart.map(Item => <cartItem key={SProducto.id} SProducto={SProducto} />)
         }
 
         <p> total :{totalPrice()}</p>

@@ -11,7 +11,7 @@ const ProductDetails = () => {
 
   const onAdd = (quantity) => {
     setCart(true);
-    // addCart(value, quantity);
+    addCart(value, quantity);
   }
   let filtrado = SProducto.filter((item) => Number(item.id) === Number(id));
   return (

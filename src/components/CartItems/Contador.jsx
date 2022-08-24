@@ -10,7 +10,7 @@ const Contador = ({ stock, onAdd }) => {
   // agregar 1 al carrito
   const agregarAlContador = () =>
     contador >= stock ? alert : setContador(contador + 1);
-  console.log(stock);
+
   // restar uno al contador
   const restarAlContador = () =>
     contador > 0 ? setContador(contador - 1) : null;

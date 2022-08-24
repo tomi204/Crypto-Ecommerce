@@ -10,7 +10,6 @@ import Navbar from "./components/Header/Navbar";
 import NavL from "./components/Lateralnav/NavL";
 import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
-import CartProvider, { CartContext } from "./components/CartItems/CartContext";
 import ProductDetails from "./components/Productos/ProductDetails";
 import CartContextProvider from "./components/CartItems/CartContext";
 function App() {

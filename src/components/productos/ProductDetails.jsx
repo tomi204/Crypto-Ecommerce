@@ -9,9 +9,8 @@ const ProductDetails = () => {
   const [goToCart, setCart] = useState(false);
   let { id } = useParams();
 
-  const onAdd = (quantity) => {
-    setCart(true);
-    addCart(value, quantity);
+  const onAdd = () => {
+    setCart(true);;
   }
   let filtrado = SProducto.filter((item) => Number(item.id) === Number(id));
   return (

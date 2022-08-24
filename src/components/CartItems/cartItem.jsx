@@ -7,8 +7,6 @@ const cartItem = () => {
         <>
             {
                 Cart.map((item) => {
-
-
                     return (
                         <div className='cart-item'>
                             <img src={item.cover} alt="" />

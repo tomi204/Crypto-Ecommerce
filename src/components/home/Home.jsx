@@ -1,5 +1,5 @@
 import React from "react";
-import NavL from "../LateralNav/NavL";
+import NavL from "../Lateralnav/NavL";
 import "./Home.css";
 import SlideCard from "./ItemList";
 function Home() {
@@ -7,6 +7,7 @@ function Home() {
     <section className="home">
       <SlideCard />
       <NavL />
+      <GetAll />
     </section>
   );
 }

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const { cart, removeFromCart, removeAll, totalPrice } = useContext(CartContext);
 
-
   return (
     <div className="cartContainer">
       <div className="cartTittle">

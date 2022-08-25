@@ -1,28 +1,54 @@
 import React from "react";
 import "./productosC.css";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import SProducto from "./SProducto";
-export default function Productos() {
-  return (
-    <section className="section-products">
-      <div className="product-d">
-        {SProducto.map((value, index) => {
-          return (
-            <div className="div-product" key={index}>
-              <div className="box-items">
-                <img src={value.cover} alt="" className="img-products" />
-                <h2>{value.title}</h2>
+import { DB } from "../Api/Firebase";
+export default function Productos({ name, img, price, id }) {
+  const { categoryId } = useParams()
+  const [data, setData] = useState();
 
-                <h4>${value.price}</h4>
-                <Link to={`/category/${value.id}`}>
-                  <button className="boton-detalles">Ver Detalles</button>
-                </Link>
+  // useEffect(() => {
 
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
+  //   const colRef = collection(DB, "Products");
+  //   console.log(colRef)
+
+  //   if (categoryId) {
+  //     const colFilterRef = query(colRef,
+  //       where('cat', '==', categoryId))
+  //     getDocs(colRef)
+  //       .then(res => setData(res.docs.map(prod => ({ id: prod.id, ...prod.data() })))
+  //       )
+  //     getDocs(colFilterRef)
+  //       .then(res => setData(res.docs.map(prod => ({ id: prod.id, ...prod.data() })))
+  //       )
+  //   } else {
+  //     getDocs(colRef)
+  //       .then(res => setData(res.docs.map(prod => ({ id: prod.id, ...prod.data() })))
+  //       )
+  //   };
+
+  // }, [categoryId]);
+  //return (
+  // <section className="section-products">
+  //   <div className="product-d">
+
+  //     return (
+  //     <div className="div-product" key={index}>
+  //       <div className="box-items">
+  //         <img src={data.cover} alt="" className="img-products" />
+  //         <h2>{data.title}</h2>
+
+  //         <h4>${price}</h4>
+  //         <Link to={`/category/${data.id}`}>
+  //           <button className="boton-detalles">Ver Detalles</button>
+  //         </Link>
+
+  //       </div>
+  //     </div>
+  //     );
+
+  //   </div>
+  // </section>
+  //);
 }

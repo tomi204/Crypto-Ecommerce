@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavL.css";
-
 import { FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
+import { getAll } from "../Api/api";
 
 function NavL() {
   return (
@@ -10,7 +10,7 @@ function NavL() {
         <a href="">
           <FaInstagram></FaInstagram>
         </a>
-        <a href="">
+        <a >
           <FaTwitter></FaTwitter>
         </a>
       </li>

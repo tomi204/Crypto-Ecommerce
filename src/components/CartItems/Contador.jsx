@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import { CartContext } from "./CartContext";
+import { useParams } from "react-router-dom";
 import "./Cart.css"
-const Contador = ({ onAdd }) => {
+const Contador = ({ stock, onAdd }) => {
   const [contador, setContador] = useState(1);
   // const stock = SProducto.map((prod) => prod.stock);
-  // const [cantStock, setCantStock] = useState(stock)
-  const stock = 15;
+  const [cantStock, setCantStock] = useState(stock)
+  // agregar 1 al carrito
   const agregarAlContador = () =>
     contador >= stock ? alert : setContador(contador + 1);
+  ;
+
   // restar uno al contador
   const restarAlContador = () =>
     contador > 0 ? setContador(contador - 1) : null;

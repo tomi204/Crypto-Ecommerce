@@ -1,13 +1,14 @@
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDmxCV8XAUCNRwY0bDJpKdN9zRUmtMTyBw",
-  authDomain: "proyectoreactch-29d90.firebaseapp.com",
-  databaseURL: "https://proyectoreactch-29d90-default-rtdb.firebaseio.com",
-  projectId: "proyectoreactch-29d90",
-  storageBucket: "proyectoreactch-29d90.appspot.com",
-  messagingSenderId: "946188183402",
-  appId: "1:946188183402:web:466093a53c63b64c60e713",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 const app = initializeApp(firebaseConfig);

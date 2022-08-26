@@ -15,41 +15,23 @@ export function GetAll() {
   useEffect(() => {
     fetchBlogs();
   }, []);
-  // [END firestore_data_get_all_documents]
   return (
     <div className="App">
-      {blogs &&
-        blogs.map((blog) => {
-          return (
-            <div className="div-product" key={blog.id}>
-              <div className="box-items">
-                <img src={blog.cover} alt="" className="img-products" />
-                <h2>{blog.tittle}</h2>
-                <h4>${blog.desc}</h4>
-                <h4>${blog.price}</h4>
-                <Link to={`/category/${blog.id}`}>
-                  <button className="boton-detalles">Ver Detalles</button>
-                </Link>
-              </div>
+      {blogs.map((blog) => {
+        return (
+          <div className="div-product" key={blog.id}>
+            <div className="box-items">
+              <img src={blog.cover} alt="" className="img-products" />
+              <h2>{blog.tittle}</h2>
+
+              <h4>${blog.price}</h4>
+              <Link to={`/category/${blog.id}`}>
+                <button className="boton-detalles">Ver Detalles</button>
+              </Link>
             </div>
-          );
-        })}
+          </div>
+        );
+      })}
     </div>
   );
 }
-
-// export function getAll() {
-//   useEffect(() => {
-
-//     getDocs(colRef).then((snapshot) => {
-//       console.log(">> snapshot.docs");
-
-//       const products = snapshot.docs.map((rawDoc) => {
-//         return {
-//           id: rawDoc.id,
-//           ...rawDoc.data(),
-//         };
-//       });
-//     });
-//   });
-// }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Cart from './Cart';
-import { CartContext } from './CartContext'
+//import { CartContext } from './CartContext'
 const cartItem = () => {
 
     return (

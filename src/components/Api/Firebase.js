@@ -13,20 +13,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const DB = getFirestore(app);
-// Initialize Firebase
-// export const DB = getFirestore(app);
-// useEffect(() => {
-//   const colRef = collection(DB, "products");
-
-//   getDocs(colRef).then((snapshot) => {
-//     console.log(">> snapshot.docs");
-
-//     const products = snapshot.docs.map((rawDoc) => {
-//       return {
-//         id: rawDoc.id,
-//         ...rawDoc.data(),
-//       };
-//     });
-//     console.log(products);
-//   });
-// });

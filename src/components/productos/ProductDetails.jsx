@@ -5,46 +5,45 @@ import { Link } from "react-router-dom";
 import Contador from "../CartItems/Contador";
 import { useState } from "react";
 import { useEffect } from "react";
+import { collection, Firestore, getDocs, getDoc } from "firebase/firestore";
+import { DB } from "../Api/Firebase";
+
 const ProductDetails = () => {
-  const [goToCart, setCart] = useState(false);
-  let { id } = useParams();
-  const [data, setData] = useState();
-  const { prodId } = useParams();
-
+  const [blogs, setBlogs] = useState([]);
+  const fetchBlogs = () => {
+    const response = collection(DB, "products");
+    const data = getDocs(response);
+    data.then((res) =>
+      setBlogs(res.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+    );
+  };
   useEffect(() => {
-    const dbDoc = doc(DB, 'ProductList', prodId);
-    getDoc(dbDoc)
-      .then(res => setData({ id: res.id, ...res.data() }))
-      .catch(err => console.log(err))
-      .finally(console.log())
-
-  }, [prodId]);
-
-  const onAdd = () => {
-    setCart(true);;
-  }
-
-
+    fetchBlogs();
+  }, []);
   return (
     <div>
-      <div className="list-item">
-        <h1>{data.title}</h1>
-        <h3>{data.desc}</h3>
-        <img src={data.cover} alt="" className="img-details" />
-        <h2> ${data.price}</h2>
-        <h2>Hay {data.stock} en stock</h2>
+      {blogs && blogs.map((blog) => {
+        return (
 
-        {goToCart ?
-          <Link to={"/Cart"}>Terminar la compra</Link>
-          :
-          <Contador onAdd={onAdd} />
+          <div className="list-item">
+            <h1>{blog.title}</h1>
+            <h3>{blog.desc}</h3>
+            <img src={blog.cover} alt="" className="img-details" />
+            <h2> ${blog.price}</h2>
+            <h2>Hay {blog.stock} en stock</h2>
 
-        }
-      </div>
+            {/* // {goToCart ? */}
+            <Link to={"/Cart"}>Terminar la compra</Link>
+            {/* //  :
+           //   <Contador onAdd={onAdd} /> */}
+
+            {/* } */}
+          </div>
+
+        );
+      })}
     </div>
   );
-
-
 }
 
 export default ProductDetails;

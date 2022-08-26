@@ -7,7 +7,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Navbar from "./components/Header/Navbar";
-import NavL from "./components/LateralNav/NavL";
+import NavL from "./components/Lateralnav/NavL";
 import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
@@ -25,7 +25,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/Productos" element={<Productos />} />
             <Route path="/category/:id" element={<ProductDetails />} />
-          </Routes>{" "}
+          </Routes>
         </CartContextProvider>
       </BrowserRouter>
     </div>

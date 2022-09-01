@@ -23,7 +23,7 @@ const ProductDetails = () => {
   }, []);
   return (
     <div>
-      {blogs.map((blog, id) => {
+      {blogs && blogs.map((blog, id) => {
         return (
           <div className="productos" key={id}>
 

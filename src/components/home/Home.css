@@ -25,3 +25,15 @@
   justify-content: center;
   width: 60%;
 }
+@media (max-width: 860px) {
+  .box {
+    margin-left: 40%;
+    align-items: center;
+  }
+  .slick-prev {
+    display: none;
+  }
+  .slick-arrow {
+    display: none;
+  }
+}

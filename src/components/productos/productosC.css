@@ -1,6 +1,7 @@
 .section-products {
-  min-width: 1200px;
-  min-height: 350px;
+  max-width: 1500px;
+  max-height: 700px;
+  display: flex;
   justify-content: center;
 }
 
@@ -38,4 +39,14 @@
   justify-content: baseline;
   width: 450px;
   height: 250px;
+}
+.product-d {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .product-d {
+    display: flex;
+    align-items: center;
+  }
 }

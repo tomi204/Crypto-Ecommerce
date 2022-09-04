@@ -2,6 +2,7 @@ import { DB } from "./Firebase";
 import { collection, Firestore, getDocs, getDoc } from "firebase/firestore";
 import { useEffect } from "react";
 import { useState } from "react";
+import "./api.css";
 import { Link } from "react-router-dom";
 export function GetAll() {
   const [blogs, setBlogs] = useState([]);
@@ -24,8 +25,8 @@ export function GetAll() {
               <div className="box-items">
                 <img src={blog.cover} alt="" className="img-products" />
                 <h2>{blog.tittle}</h2>
-
-                <h4>${blog.price}</h4>
+                <br></br>
+                <h4 className="precio">${blog.price}</h4>
                 <Link to={`/category/${blog.id}`}>
                   <button className="boton-detalles">Ver Detalles</button>
                 </Link>

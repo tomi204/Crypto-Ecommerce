@@ -16,6 +16,7 @@ export function GetAll() {
   useEffect(() => {
     fetchBlogs();
   }, []);
+  console.log(blogs);
   return (
     <div className="App">
       {blogs &&

@@ -1,6 +1,4 @@
 .section-products {
-  max-width: 1500px;
-  max-height: 700px;
   display: flex;
   justify-content: center;
 }

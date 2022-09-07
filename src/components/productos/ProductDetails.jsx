@@ -10,20 +10,20 @@ import { DB } from "../Api/Firebase";
 
 const ProductDetails = () => {
   //const { id } = useParams();
-  const [blogs, setBlogs] = useState([]);
-  const fetchBlogs = () => {
-    const response = collection(DB, "products");
-    const data = getDocs(response);
-    data.then((res) =>
-      setBlogs(res.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
-    );
-  };
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
+  // const [blogs, setBlogs] = useState([]);
+  // const fetchBlogs = () => {
+  //   const response = collection(DB, "products");
+  //   const data = getDocs(response);
+  //   data.then((res) =>
+  //     setBlogs(res.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+  //   );
+  // };
+  // useEffect(() => {
+  //   fetchBlogs();
+  // }, []);
   return (
     <div>
-      {blogs && blogs.map((blog, id) => {
+      {blogs && blogs.filter((blog) => blog.categoria === category).map(({ id, desc, price }) => {
         return (
           <div className="productos" key={id}>
 

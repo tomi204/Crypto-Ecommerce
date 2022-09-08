@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import "./Cart.css";
-import { CartContext } from "./CartContext";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import { DataProvider } from "../context";
 const Cart = () => {
-  const { cart, removeFromCart, removeAll, totalPrice } = useContext(CartContext);
+  const { CartItem, setCartItem, addToCart, decreaseQty, deleteQty, count, setCount } = useContext(DataProvider);
+
 
   return (
     <div className="cartContainer">
@@ -16,48 +16,48 @@ const Cart = () => {
 
       </div>
 
-      <Container className="cartGrid">
 
-        <Container className="containerProds">
-          {cart == "" ? (
-            <div className="vacio">
-              <p>Agrega productos al carrito </p>
-              <Button as={Link} to="/Productos" className="continue">
-                Ir de compras
-              </Button>
-            </div>
-          ) : (
-            <>
-              {cart.map((item) => (
-                <Row key={item.id} className="prodGrid">
-                  <Col m={2} className="itemImg">
-                    <Link to={`/detail/${item.name}`}>
-                      <img src={item.img} width="100px" alt={item.name}></img>
-                    </Link>
-                  </Col>
-                  <Col m={3} className="itemName">
-                    {item.name} por {item.weight}
-                  </Col>
-                  <Col m={2} className="itemCont">{item.contador}</Col>
-                  <Col m={2} className="itemPrice">{`$ ${item.price}`}</Col>
-                  <Col m={2} className="subTotal">{`$ ${item.contador * item.price
-                    }`}</Col>
-                  <Col m={1} className="itemClear">
-                    <Button
-                      className="clearProd"
-                      onClick={() => removeFromCart(item.id)}
-                    >
-                      <FaTrash />
-                    </Button>
-                  </Col>
-                </Row>
-              ))}
-            </>
-          )}
-        </Container>
+
+      <Container className="containerProds">
+        {CartItem == "" ? (
+          <div className="vacio">
+            <p>Agrega productos al carrito </p>
+            <Button as={Link} to="/Productos" className="continue">
+              Ir de compras
+            </Button>
+          </div>
+        ) : (
+          <>
+            {CartItem.map((item) => (
+              <Row key={item.id} className="prodGrid">
+                <Col m={2} className="itemImg">
+                  <Link to={`/detail/${item.name}`}>
+                    <img src={item.cover} width="100px" alt={item.name}></img>
+                  </Link>
+                </Col>
+                <Col m={3} className="itemName">
+                  {item.name} por {item.weight}
+                </Col>
+                <Col m={2} className="itemCont">{item.contador}</Col>
+                <Col m={2} className="itemPrice">{`$ ${item.price}`}</Col>
+                <Col m={2} className="subTotal">{`$ ${item.contador * item.price
+                  }`}</Col>
+                <Col m={1} className="itemClear">
+                  <Button
+                    className="clearProd"
+                    onClick={() => remove(item.id)}
+                  >
+                    <FaTrash />
+                  </Button>
+                </Col>
+              </Row>
+            ))}
+          </>
+        )}
       </Container>
+
       <hr />
-      {cart == "" ? (
+      {CartItem == "" ? (
         <></>
       ) : (
         <div className="cartBottom">

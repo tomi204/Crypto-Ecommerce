@@ -5,8 +5,9 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
     const [blogs, setBlogs] = useState([]);
-    const { CartItem, setCartItem } = useState([]);
-
+    const [CartItem, setCartItem] = useState([]);
+    const [count, setCount] = useState(1);
+    const [isSelected, setIsSelected] = useState(true)
 
 
 
@@ -69,7 +70,12 @@ export const DataProvider = ({ children }) => {
             setCartItem,
             addToCart,
             decreaseQty,
-            deleteQty
+            deleteQty,
+            count,
+            setCount,
+            isSelected,
+            setIsSelected
+
         }}>
             {children}
         </DataContext.Provider>

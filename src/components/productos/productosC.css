@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
 }
-
+.btnAdd {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
 .div-product {
   color: rgb(0, 0, 0);
   display: flex;

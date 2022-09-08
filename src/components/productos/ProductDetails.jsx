@@ -2,17 +2,15 @@ import React from "react";
 import "./productosC.css";
 import { Link } from "react-router-dom";
 import Contador from "../CartItems/Contador";
-import { useState, useEffect } from "react";
-import { collection, getDocs, getDoc, query, where } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { GetAll } from "../Api/api";
 import { useContext } from "react";
 import { DataContext } from "../context";
 const ProductDetails = () => {
-  const { blogs, setBlogs } = useContext(DataContext);
+  const { blogs, setBlogs, addToCart, decreaseQty, deleteQty } = useContext(DataContext);
   const productsId = GetAll();
   const { id } = useParams();
-  console.log("hola aa", blogs)
+  console.log(addToCart)
 
   return (
     <div className="productos" >
@@ -25,7 +23,8 @@ const ProductDetails = () => {
             <h2> ${blog.price}</h2>
             <h2>Hay {blog.stock} en stock</h2>
             <h2> ${blog.price}</h2>
-
+            <button onClick={addToCart} className="btnAdd">+1</button>
+            <button onClick={decreaseQty} className="btnAdd">-1</button>
             {/* // {goToCart ? */}
             <Link to={"/Cart"}>Terminar la compra</Link>
             {/* //  :

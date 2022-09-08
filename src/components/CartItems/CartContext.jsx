@@ -2,7 +2,6 @@ import React from "react";
 import { useContext } from "react";
 import { useState, createContext } from "react";
 import { useParams } from "react-router-dom";
-import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";
 
 export const CartContext = createContext();
 

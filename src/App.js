@@ -11,13 +11,14 @@ import NavL from "./components/Lateralnav/NavL";
 import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
-import CartContextProvider from "./components/CartItems/CartContext";
+import { DataProvider } from "./components/context";
+//import CartContextProvider from "./components/CartItems/CartContext";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <CartContextProvider>
+        <DataProvider>
           <Navbar />
           <NavL />
           <Routes>
@@ -26,7 +27,7 @@ function App() {
             <Route path="/Productos" element={<Productos />} />
             <Route path="/category/:id" element={<ProductDetails />} />
           </Routes>
-        </CartContextProvider>
+        </DataProvider>
       </BrowserRouter>
     </div>
   );

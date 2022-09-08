@@ -19,7 +19,6 @@ export default function Productos() {
                   <br></br>
                   <h4 className="precio">${blog.price}</h4>
                   <Link to={`/category/${blog.id}`}>
-                    <ProductDetails props={blog} />
                     <button className="boton-detalles">Ver Detalles</button>
                   </Link>
                 </div>

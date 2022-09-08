@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavL.css";
-import { FaInstagram, FaTiktok, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import { getAll } from "../Api/api";
 
 function NavL() {
@@ -15,6 +15,9 @@ function NavL() {
         </a>
         <a href="https://www.linkedin.com/in/tomi204/">
           <FaLinkedin></FaLinkedin>
+        </a>
+        <a href="">
+          <FaGithub />
         </a>
       </li>
     </ul>

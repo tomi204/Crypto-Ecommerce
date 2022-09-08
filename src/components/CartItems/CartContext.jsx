@@ -9,8 +9,7 @@ const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [cantInCart, setCantInCart] = useState(0)
   const [totalPrice, setTotalPrice] = useState(0)
-
-
+  
   const isInCart = (id) => {
     const productInCart = cart.find((productInCart) => productInCart.id === id);
     if (productInCart) return true;

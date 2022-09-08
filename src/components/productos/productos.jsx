@@ -3,14 +3,18 @@ import "./productosC.css";
 import { GetAll } from "../Api/api";
 import { Link } from "react-router-dom";
 import ProductDetails from "./ProductDetails";
+import { useContext } from "react";
+import { DataContext } from "../context";
 export default function Productos() {
   const productosA = GetAll();
+  const { blogs, setBlogs } = useContext(DataContext);
+
   return (
     <section className="section-products">
       <div className="product-d">
 
-        {productosA &&
-          productosA.map((blog) => {
+        {blogs &&
+          blogs.map((blog) => {
             return (
               <div className="div-product" key={blog.id}>
                 <div className="box-items">

@@ -10,7 +10,12 @@
   justify-content: space-evenly;
   color: white;
 }
-
+.precio {
+  font-size: small;
+  display: flex;
+  right: 15px;
+  padding-top: 80px;
+}
 .img-products {
   max-width: 155px;
   max-height: 125px;

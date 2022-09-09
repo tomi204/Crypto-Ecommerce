@@ -17,6 +17,6 @@ export function GetAll() {
   useEffect(() => {
     fetchBlogs();
   }, []);
-  console.log("hola diego", blogs);
+
   return blogs;
 }

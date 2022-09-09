@@ -7,7 +7,7 @@ import { GetAll } from "../Api/api";
 import { useContext } from "react";
 import { DataContext } from "../context";
 const ProductDetails = () => {
-  const { blogs, setBlogs, addToCart, decreaseQty, deleteQty } = useContext(DataContext);
+  const { blogs, setBlogs, addToCart, decreaseQty, deleteQty, } = useContext(DataContext);
   const productsId = GetAll();
   const { id } = useParams();
   console.log(addToCart)
@@ -22,7 +22,6 @@ const ProductDetails = () => {
             <img src={blog.cover} alt="" className="img-details" />
             <h2> ${blog.price}</h2>
             <h2>Hay {blog.stock} en stock</h2>
-            <h2> ${blog.price}</h2>
             <button onClick={addToCart} className="btnAdd">+1</button>
             <button onClick={decreaseQty} className="btnAdd">-1</button>
             {/* // {goToCart ? */}

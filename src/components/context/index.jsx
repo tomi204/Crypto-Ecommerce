@@ -8,11 +8,11 @@ export const DataProvider = ({ children }) => {
     const [CartItem, setCartItem] = useState([]);
     const [count, setCount] = useState(1);
     const [isSelected, setIsSelected] = useState(true)
+    console.log("hola brother", blogs)
 
 
 
-
-    const addToCart = (blogs) => {
+    const addToCart = () => {
 
         const productExit = CartItem.find((item) => item.id === blogs.id);
 
@@ -38,7 +38,7 @@ export const DataProvider = ({ children }) => {
     };
 
 
-    const decreaseQty = (blogs) => {
+    const decreaseQty = () => {
 
         const productExit = CartItem.find((item) => item.id === blogs.id);
 
@@ -57,7 +57,7 @@ export const DataProvider = ({ children }) => {
     };
 
 
-    const deleteQty = (blogs) => {
+    const deleteQty = () => {
         setCartItem(CartItem.filter((item) => item.id !== blogs.id));
     }
 

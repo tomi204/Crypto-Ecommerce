@@ -2,11 +2,12 @@ import React from 'react'
 import Cart from './Cart';
 //import { CartContext } from './CartContext'
 const cartItem = () => {
-
+    const { blogs, setBlogs, addToCart, decreaseQty, deleteQty, cartItem, setCartItem } = useContext(DataContext);
+    // render cart items
     return (
         <>
             {
-                Cart.map((item) => {
+                cartItem.map((item) => {
                     return (
                         <div className='cart-item'>
                             <img src={item.cover} alt="" />

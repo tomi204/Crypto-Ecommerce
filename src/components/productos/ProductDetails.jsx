@@ -7,10 +7,10 @@ import { GetAll } from "../Api/api";
 import { useContext } from "react";
 import { DataContext } from "../context";
 const ProductDetails = () => {
+  // datacontext from context and get data from api 
   const { blogs, setBlogs, addToCart, decreaseQty, deleteQty, } = useContext(DataContext);
   const productsId = GetAll();
   const { id } = useParams();
-  console.log(addToCart)
 
   return (
     <div className="productos" >

@@ -6,6 +6,7 @@ import "./api.css";
 import { DataContext } from "../context";
 
 export function GetAll() {
+  // api call to get all products
   const { blogs, setBlogs } = useContext(DataContext);
   const fetchBlogs = () => {
     const response = collection(DB, "products");

@@ -3,6 +3,7 @@ import { createContext } from 'react'
 import { useState } from 'react';
 export const DataContext = createContext();
 
+// data provider context component
 export const DataProvider = ({ children }) => {
     const [blogs, setBlogs] = useState([]);
     const [CartItem, setCartItem] = useState([]);
@@ -11,7 +12,7 @@ export const DataProvider = ({ children }) => {
     console.log("hola brother", blogs)
 
 
-
+    // add to cart function
     const addToCart = () => {
 
         const productExit = CartItem.find((item) => item.id === blogs.id);
@@ -37,7 +38,7 @@ export const DataProvider = ({ children }) => {
         }
     };
 
-
+    // delete item from cart
     const decreaseQty = () => {
 
         const productExit = CartItem.find((item) => item.id === blogs.id);
@@ -56,7 +57,7 @@ export const DataProvider = ({ children }) => {
         }
     };
 
-
+    // delete all from cart
     const deleteQty = () => {
         setCartItem(CartItem.filter((item) => item.id !== blogs.id));
     }

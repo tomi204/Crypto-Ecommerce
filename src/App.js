@@ -12,7 +12,6 @@ import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
 import { DataProvider } from "./components/context";
-//import CartContextProvider from "./components/CartItems/CartContext";
 
 function App() {
   return (

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Cart.css"
 const Contador = ({ stock, onAdd }) => {
+  // contador 
   const [contador, setContador] = useState(1);
   // const stock = SProducto.map((prod) => prod.stock);
   const [cantStock, setCantStock] = useState(stock)

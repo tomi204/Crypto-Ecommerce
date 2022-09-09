@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { DataProvider } from "../context";
 const Cart = () => {
+  // data context from context
   const { CartItem, setCartItem, addToCart, decreaseQty, deleteQty, count, setCount } = useContext(DataProvider);
 
 

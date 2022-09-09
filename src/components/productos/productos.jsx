@@ -6,9 +6,10 @@ import ProductDetails from "./ProductDetails";
 import { useContext } from "react";
 import { DataContext } from "../context";
 export default function Productos() {
+  // datacontext from context and get data from api
   const productosA = GetAll();
   const { blogs, setBlogs } = useContext(DataContext);
-
+  // render products and link to product details
   return (
     <section className="section-products">
       <div className="product-d">

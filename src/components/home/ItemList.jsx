@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 const SlideCard = () => {
+  //slider settings
   const settings = {
     dots: false,
     fade: true,
@@ -16,8 +17,10 @@ const SlideCard = () => {
       return <ul className="ul-mainS" style={{ margin: "0px" }}>{dots}</ul>;
     },
   };
+  //slider component
   return (
     <>
+
       <Slider {...settings}>
         {Sdata.map((value, index) => {
           return (

@@ -28,7 +28,7 @@ const SlideCard = () => {
               <div className="box" key={index}>
                 <div className="left">
                   <h1>{value.title}</h1>
-                  <p>{value.desc}</p>
+                  <p className="descripcion-slider">{value.desc}</p>
                   <img src={value.cover} alt="" className="img-home" />
                 </div>
               </div>

@@ -24,10 +24,11 @@ const ProductDetails = () => {
 
             <h2> ${blog.price}</h2>
             <h2>Hay {blog.stock} en stock</h2>
+            <br />
             <button onClick={addToCart} className="btnAdd">+1</button>
             <button onClick={decreaseQty} className="btnAdd">-1</button>
             {/* // {goToCart ? */}
-            <Link to={"/Cart"}>Terminar la compra</Link>
+            <Link to={"/Cart"}>Ir al carrito</Link>
             {/* //  :
          //   <Contador onAdd={onAdd} /> */}
 

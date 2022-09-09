@@ -46,7 +46,7 @@ const Cart = () => {
                 <Col m={1} className="itemClear">
                   <Button
                     className="clearProd"
-                    onClick={() => remove(item.id)}
+                    onClick={() => deleteQty(item.id)}
                   >
                     <FaTrash />
                   </Button>

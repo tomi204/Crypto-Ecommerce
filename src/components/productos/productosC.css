@@ -1,5 +1,5 @@
 .section-products {
-  display: flex;
+  display: list-item;
   justify-content: center;
 }
 .btnAdd {
@@ -10,9 +10,11 @@
 .div-product {
   color: rgb(0, 0, 0);
   display: flex;
-  border-color: aqua;
-  justify-content: space-evenly;
   color: white;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  justify-content: center;
 }
 .precio {
   font-size: small;

@@ -12,26 +12,26 @@ export default function Productos() {
   // render products and link to product details
   return (
     <section className="section-products">
-      <div className="product-d">
 
-        {blogs &&
-          blogs.map((blog) => {
-            return (
-              <div className="div-product" key={blog.id}>
-                <div className="box-items">
-                  <img src={blog.cover} alt="" className="img-products" />
-                  <h2>{blog.tittle}</h2>
-                  <br></br>
-                  <h4 className="precio">${blog.price}</h4>
-                  <Link to={`/category/${blog.id}`}>
-                    <button className="boton-detalles">Ver Detalles</button>
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-      </div>
-      ;
+
+      {blogs &&
+        blogs.map((blog) => {
+          return (
+            <div className="div-product" >
+
+              <img src={blog.cover} alt="" className="img-products" />
+              <h2>{blog.tittle}</h2>
+              <br></br>
+              <h4 className="precio">${blog.price}</h4>
+              <Link to={`/category/${blog.id}`}>
+                <button className="boton-detalles">Ver Detalles</button>
+              </Link>
+
+            </div>
+          );
+        })}
+
+
 
     </section>
 

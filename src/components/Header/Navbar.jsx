@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul className="ul-n">
-        <NavLink to={"./Home"}>
+        <NavLink to={"./"}>
           <li>INICIO</li>
         </NavLink>
         <NavLink to={"./Productos"}>

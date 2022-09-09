@@ -43,8 +43,9 @@
   cursor: pointer;
 }
 .list-item {
+  display: list-item;
   color: white;
-  place-items: center;
+  justify-content: center;
   align-items: center;
 }
 .img-details {

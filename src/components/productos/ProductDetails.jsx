@@ -20,8 +20,8 @@ const ProductDetails = () => {
             <br></br>
             <img src={blog.cover} alt="" className="img-details" />
             <h1>{blog.title}</h1>
-            <h3>{blog.desc}</h3>
-
+            <h3 className="desc-id">{blog.desc}</h3>
+            <br></br>
             <h2> ${blog.price}</h2>
             <h2>Hay {blog.stock} en stock</h2>
             <br />

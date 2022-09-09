@@ -20,12 +20,15 @@ export default function Productos() {
             <div className="div-product" >
 
               <img src={blog.cover} alt="" className="img-products" />
+
               <h2>{blog.tittle}</h2>
-              <br></br>
               <h4 className="precio">${blog.price}</h4>
-              <Link to={`/category/${blog.id}`}>
+
+
+              <Link to={`/category/${blog.id}`} className="link-detalles">
                 <button className="boton-detalles">Ver Detalles</button>
               </Link>
+
 
             </div>
           );

@@ -9,7 +9,7 @@ import { DataContext } from "../context";
 const ProductDetails = () => {
   // datacontext from context and get data from api 
   const { blogs, setBlogs, addToCart, decreaseQty, deleteQty, } = useContext(DataContext);
-  const productsId = GetAll();
+  // const productsId = GetAll();
   const { id } = useParams();
 
   return (
@@ -17,9 +17,11 @@ const ProductDetails = () => {
       {blogs && blogs.filter(item => item.id === Number(id)).map((blog) => {
         return (
           <div className="list-item" key={blog.id}>
+            <br></br>
+            <img src={blog.cover} alt="" className="img-details" />
             <h1>{blog.title}</h1>
             <h3>{blog.desc}</h3>
-            <img src={blog.cover} alt="" className="img-details" />
+
             <h2> ${blog.price}</h2>
             <h2>Hay {blog.stock} en stock</h2>
             <button onClick={addToCart} className="btnAdd">+1</button>

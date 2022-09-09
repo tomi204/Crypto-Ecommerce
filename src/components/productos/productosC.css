@@ -23,13 +23,16 @@
 }
 .link-detalles {
   align-items: center;
-  max-width: 55px;
-  max-height: 55px;
 }
 
 .img-products {
   max-width: 155px;
   max-height: 125px;
+}
+.addC-P {
+  background-color: white;
+  width: 50px;
+  height: 35px;
 }
 .boton-detalles {
   width: 75px;
@@ -37,6 +40,7 @@
   background-color: white;
   border-radius: 4px;
   margin-top: 40px;
+  cursor: pointer;
 }
 .list-item {
   color: white;

@@ -8,7 +8,7 @@ import { DataContext } from "../context";
 export default function Productos() {
   // datacontext from context and get data from api
   const productosA = GetAll();
-  const { blogs, setBlogs } = useContext(DataContext);
+  const { blogs, setBlogs, addToCart } = useContext(DataContext);
   // render products and link to product details
   return (
     <section className="section-products">
@@ -18,17 +18,13 @@ export default function Productos() {
         blogs.map((blog) => {
           return (
             <div className="div-product" >
-
               <img src={blog.cover} alt="" className="img-products" />
-
               <h2>{blog.tittle}</h2>
               <h4 className="precio">${blog.price}</h4>
-
-
+              <button className="addC-P" onClick={addToCart}> + </button>
               <Link to={`/category/${blog.id}`} className="link-detalles">
                 <button className="boton-detalles">Ver Detalles</button>
               </Link>
-
 
             </div>
           );

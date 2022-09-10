@@ -1,17 +1,33 @@
 .navl {
   display: flex;
   position: fixed;
-  top: 60%;
-  transform: translateY(-50%);
+  top: 56%;
   justify-content: center;
   align-items: flex-end;
   width: 40px;
-  height: 150px;
+  height: 110px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 .li-n a {
-  display: flex;
+  display: list-item;
+
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.a-navl {
+  display: list-item;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 550px) {
+  .navl {
+    width: 20px;
+    top: 30%;
+    align-items: center;
+  }
 }

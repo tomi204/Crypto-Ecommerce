@@ -26,11 +26,9 @@ const SlideCard = () => {
           return (
             <>
               <div className="box" key={index}>
-                <div className="left">
-                  <h1>{value.title}</h1>
-                  <p className="descripcion-slider">{value.desc}</p>
-                  <img src={value.cover} alt="" className="img-home" />
-                </div>
+
+                <img src={value.cover} alt="" className="img-home" />
+
               </div>
             </>
           );

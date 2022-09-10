@@ -17,7 +17,7 @@ function NavL() {
         <a href="https://www.linkedin.com/in/tomi204/">
           <FaLinkedin></FaLinkedin>
         </a>
-        <a href="">
+        <a href="https://github.com/tomi204">
           <FaGithub />
         </a>
       </li>

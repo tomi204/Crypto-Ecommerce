@@ -3,7 +3,6 @@ import Sdata from "./Sdata";
 import "./Home.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-
 const SlideCard = () => {
   //slider settings
   const settings = {
@@ -26,9 +25,7 @@ const SlideCard = () => {
           return (
             <>
               <div className="box" key={index}>
-
                 <img src={value.cover} alt="" className="img-home" />
-
               </div>
             </>
           );

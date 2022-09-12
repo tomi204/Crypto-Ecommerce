@@ -9,10 +9,10 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .li-n a {
   display: list-item;
 
-  color: rgb(255, 255, 255);
   font-size: 1rem;
   align-items: center;
   justify-content: center;
@@ -23,6 +23,7 @@
   font-size: 1rem;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 @media (max-width: 550px) {
   .navl {

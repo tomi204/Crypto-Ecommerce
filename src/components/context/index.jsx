@@ -24,6 +24,7 @@ export const DataProvider = ({ children }) => {
                         ?
                         {
                             ...productExit, qty: productExit.qty + 1,
+
                         }
                         : item
                 )

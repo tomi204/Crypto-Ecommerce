@@ -1,44 +1,54 @@
-.Carrito {
-  color: aliceblue;
-  margin-top: 150px;
-  max-width: 1000px;
-  max-height: 500px;
+.item-products {
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  border-radius: 12px;
+  border-color: white;
+  color: white;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  display: list-item;
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  animation: fade-in 0.8s ease-in forwards;
+}
+.cart-Item-Image {
+  width: 60%;
+  height: 50%;
 }
 .btnN {
-  background-color: white;
-  max-width: 55px;
-  max-height: 35px;
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 25px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 4px;
 }
 .eliminar {
-  background-color: white;
-  max-width: 55px;
-  max-height: 35px;
+  background-color: rgb(255, 255, 255);
+  width: 75px;
+  height: 55px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 4px;
 }
 .btnA {
-  background-color: white;
-  max-width: 55px;
-  max-height: 35px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .cartTittle,
 .vacio {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .Contador {
-  color: aliceblue;
-}
-.carrito-SR {
-  width: 300px;
-  height: 300px;
-}
-.agregar-carrito {
-  color: white;
-  background-color: blue;
-}
-.h2-carrito {
-  color: white;
-  margin-left: 85px;
-}
-.box-compra {
-  color: aliceblue;
+  color: rgb(0, 0, 0);
 }

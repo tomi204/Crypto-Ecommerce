@@ -7,25 +7,50 @@ import { useContext } from "react";
 import { DataContext } from "../context";
 const ProductDetails = () => {
   // datacontext from context and get data from api 
-  const { blogs, setBlogs, addToCart, decreaseQty, deleteQty, } = useContext(DataContext);
-  // const productsId = GetAll();
+  const { blogs, setBlogs, addToCart } = useContext(DataContext);
   const { id } = useParams();
+  // const productsId = GetAll();
+  function createProduct(id, tittle, cover, desc, price, stock, category) {
+    let product = {
+      id,
+      tittle,
+      cover,
+      desc,
+      price,
+      stock,
+      category
+    }
+    addToCart(product)
+    console.log(addToCart)
+  }
+  function decreaseProduct(id, tittle, cover, desc, price, stock) {
+    let product = {
+      id,
+      tittle,
+      cover,
+      desc,
+      price,
+      stock
+    }
+    decreaseQty(product)
+  }
 
   return (
     <div className="productos" >
-      {blogs && blogs.filter(item => item.id === Number(id)).map((blog) => {
+      {blogs && blogs.filter(item => item.id === Number(id)).map((item) => {
         return (
-          <div className="list-item" key={blog.id}>
+          <div className="list-item" key={item.id}>
             <br></br>
-            <img src={blog.cover} alt="" className="img-details" />
-            <h1>{blog.title}</h1>
-            <h3 className="desc-id">{blog.desc}</h3>
+            <img src={item.cover} alt="" className="img-details" />
+            <h1>{item.title}</h1>
+            <h3 className="desc-id">{item.desc}</h3>
             <br></br>
-            <h2> ${blog.price}</h2>
-            <h2>Hay {blog.stock} en stock</h2>
+            <h2> ${item.price}</h2>
+            <h2>Hay {item.stock} en stock</h2>
             <br />
-            <button onClick={addToCart} className="btnAdd">+1</button>
-            <button onClick={decreaseQty} className="btnAdd">-1</button>
+            <button className="addCart-D" onClick={() => createProduct(item.id, item.tittle, item.price, item.cover, item.stock, item.desc, item.category)}> + </button>
+            <button className="btnN" onClick={() => decreaseProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>-</button>
+
             {/* // {goToCart ? */}
             <Link to={"/Cart"}>Ir al carrito</Link>
             {/* //  :

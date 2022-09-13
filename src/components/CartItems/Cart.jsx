@@ -7,14 +7,15 @@ import { DataContext } from "../context";
 const Cart = () => {
   // data context from context
   const { CartItem, setCartItem, addToCart, decreaseQty, deleteQty, count, setCount } = useContext(DataContext);
-  function createProduct(id, tittle, cover, desc, price, stock) {
+  function createProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
       tittle,
       cover,
       desc,
       price,
-      stock
+      stock,
+      category
     }
     addToCart(product)
 
@@ -33,6 +34,8 @@ const Cart = () => {
     }
     decreaseQty(product)
   }
+  console.log("holhohlolla", CartItem)
+
 
   return (
 
@@ -54,14 +57,15 @@ const Cart = () => {
                 <div className="item-products">
                   <h3>{item.tittle}</h3>
                   <img src={item.desc} alt="" className="cart-Item-Image" />
-                  <h4> ${item.cover}</h4>
                   <br></br>
                   <button className="btnA" onClick={() => createProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>+</button>
                   <button className="btnN" onClick={() => decreaseProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>-</button>
                   <h2 className="contador">{item.qty}</h2>
+                  <h2>${item.qty * item.cover}</h2>
                   <button className="eliminar" onClick={() => deleteQty(item.id)}>eliminar producto</button>
 
                 </div>
+
               ))}
             </>
         }

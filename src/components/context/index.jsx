@@ -12,6 +12,7 @@ export const DataProvider = ({ children }) => {
 
 
 
+
     // add to cart function
     const addToCart = (blog) => {
 
@@ -35,6 +36,7 @@ export const DataProvider = ({ children }) => {
                 ...blog, qty: 1,
                 ...blog, sort: count,
                 ...blog, selected: isSelected
+
             }]);
         }
 

@@ -75,6 +75,23 @@
 }
 .addCart-D {
   background-color: #ffffff;
+  width: 30px;
+  height: 25px;
+}
+.addCart-D:hover {
+  transform-box: scale(2);
+  background-color: aqua;
+  color: #ffffff;
+}
+.btnN {
+  background-color: #ffffff;
+  width: 50px;
+  height: 35px;
+}
+.link-cart {
+  cursor: pointer;
+  border-color: white;
+  border-radius: 4px;
 }
 @media (max-width: 550px) {
   .product-d {

@@ -34,7 +34,7 @@ const ProductDetails = () => {
       category
     }
     decreaseQty(product)
-    console.log(decreaseProduct)
+
   }
 
   return (
@@ -54,7 +54,7 @@ const ProductDetails = () => {
             <button className="btnN" onClick={() => decreaseProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>-</button>
 
             {/* // {goToCart ? */}
-            <Link to={"/Cart"}>Ir al carrito</Link>
+            <Link to={"/Cart"} className="link-cart">Ir al carrito</Link>
             {/* //  :
          //   <Contador onAdd={onAdd} /> */}
 

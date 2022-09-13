@@ -9,7 +9,7 @@
   max-width: 55px;
   max-height: 35px;
 }
-.btnR {
+.eliminar {
   background-color: white;
   max-width: 55px;
   max-height: 35px;
@@ -18,6 +18,11 @@
   background-color: white;
   max-width: 55px;
   max-height: 35px;
+}
+
+.cartTittle,
+.vacio {
+  color: white;
 }
 .Contador {
   color: aliceblue;

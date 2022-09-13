@@ -12,9 +12,8 @@ const SlideCard = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    appendDots: (dots) => {
-      return <ul className="ul-mainS" style={{ margin: "0px" }}>{dots}</ul>;
-    },
+
+
   };
   //slider component
   return (
@@ -23,11 +22,11 @@ const SlideCard = () => {
       <Slider {...settings}>
         {Sdata.map((value, index) => {
           return (
-            <>
-              <div className="box" key={index}>
-                <img src={value.cover} alt="" className="img-home" />
-              </div>
-            </>
+
+            <div className="box" key={index}>
+              <img src={value.cover} alt="" className="img-home" />
+            </div>
+
           );
         })}
       </Slider>

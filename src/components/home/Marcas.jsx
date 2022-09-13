@@ -16,9 +16,11 @@ const Marcas = () => {
         },
     };
 
-    return (
-        
-    )
+    return
+    <>
+
+    </>
+
 }
 
 export default Marcas

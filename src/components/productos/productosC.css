@@ -1,9 +1,12 @@
 .section-products {
-  display: list-item;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100%;
+  padding: 10px;
+  height: auto;
+  min-height: 500px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 10px;
 }
 .btnAdd {
   width: 50px;
@@ -11,23 +14,34 @@
   background-color: white;
 }
 .div-product {
-  margin: 105px;
-  display: list-item;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  margin-top: 40px;
-  max-width: 20%;
-  margin-left: 40%;
-  list-style: none;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  animation: fade-in 0.8s ease-in forwards;
 }
 .link-detalles {
   align-items: center;
 }
 
 .img-products {
-  max-width: 155px;
-  max-height: 125px;
+  height: 220px;
+  /* border: .5px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 240px;
+  margin: 0 auto;
 }
 .addC-P {
   background-color: white;
@@ -39,7 +53,7 @@
   height: 55px;
   background-color: white;
   border-radius: 4px;
-  margin-top: 40px;
+
   cursor: pointer;
 }
 .list-item {
@@ -53,7 +67,6 @@
   width: 350px;
 }
 .box-items {
-  margin-top: 50px;
   display: inline-flex;
   justify-content: baseline;
   width: 450px;

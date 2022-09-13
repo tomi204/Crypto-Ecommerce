@@ -9,18 +9,18 @@ export const DataProvider = ({ children }) => {
     const [CartItem, setCartItem] = useState([]);
     const [count, setCount] = useState(1);
     const [isSelected, setIsSelected] = useState(true)
-    console.log("hola brother", blogs)
+
 
 
     // add to cart function
-    const addToCart = () => {
+    const addToCart = (blog) => {
 
-        const productExit = CartItem.find((item) => item.id === blogs.id);
+        const productExit = CartItem.find((item) => item.id === blog.id);
 
         if (productExit) {
             setCartItem(
                 CartItem.map((item) =>
-                    item.id === blogs.id
+                    item.id === blog.id
                         ?
                         {
                             ...productExit, qty: productExit.qty + 1,
@@ -31,25 +31,26 @@ export const DataProvider = ({ children }) => {
         } else {
 
             setCartItem([...CartItem, {
-                ...blogs, qty: 1,
-                ...blogs, sort: count,
-                ...blogs, selected: isSelected
+                ...blog, qty: 1,
+                ...blog, sort: count,
+                ...blog, selected: isSelected
             }]);
         }
+
     };
 
     // delete item from cart
-    const decreaseQty = () => {
+    const decreaseQty = (blog) => {
 
-        const productExit = CartItem.find((item) => item.id === blogs.id);
+        const productExit = CartItem.find((item) => item.id === blog.id);
 
 
         if (productExit.qty === 1) {
-            setCartItem(CartItem.filter((item) => item.id !== blogs.id));
+            setCartItem(CartItem.filter((item) => item.id !== blog.id));
         } else {
             setCartItem(
                 CartItem.map((item) =>
-                    item.id === blogs.id
+                    item.id === blog.id
                         ? { ...productExit, qty: productExit.qty - 1 }
                         : item
                 )
@@ -58,8 +59,8 @@ export const DataProvider = ({ children }) => {
     };
 
     // delete all from cart
-    const deleteQty = () => {
-        setCartItem(CartItem.filter((item) => item.id !== blogs.id));
+    const deleteQty = (id) => {
+        setCartItem(CartItem.filter((item) => item.id !== id));
     }
 
 

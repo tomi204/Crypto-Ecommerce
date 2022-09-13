@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../context";
 const Cart = () => {
   // data context from context
-  const { CartItem, setCartItem, addToCart, decreaseQty, deleteQty, count, setCount } = useContext(DataContext);
+  const { CartItem, setCartItem, addToCart, decreaseQty, deleteQty, count, setCount, calcTotal, totalQtty } = useContext(DataContext);
   function createProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
@@ -54,7 +54,7 @@ const Cart = () => {
             :
             <>
               {CartItem.map((item) => (
-                <div className="item-products">
+                <div className="item-products" key={item}>
                   <h3>{item.tittle}</h3>
                   <img src={item.desc} alt="" className="cart-Item-Image" />
                   <br></br>
@@ -62,6 +62,7 @@ const Cart = () => {
                   <button className="btnN" onClick={() => decreaseProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>-</button>
                   <h2 className="contador">{item.qty}</h2>
                   <h2>${item.qty * item.cover}</h2>
+                  <h3>Precio total:${calcTotal(totalQtty)}</h3>
                   <button className="eliminar" onClick={() => deleteQty(item.id)}>eliminar producto</button>
 
                 </div>

@@ -41,6 +41,19 @@ export const DataProvider = ({ children }) => {
         }
 
     };
+    //total price
+    const totalQttyPerItem = (id) => {
+        let index = CartItem.map(item => item.id).indexOf(id);
+        return CartItem[index].cover * CartItem[index].qty;
+    }
+    const totalQtty = () => {
+        let total = CartItem.map(item => totalQttyPerItem(item.id));
+        return total.reduce((prev, curr) => prev + curr);
+    }
+
+    const calcTotal = () => {
+        return totalQtty();
+    }
 
     // delete item from cart
     const decreaseQty = (blog) => {
@@ -79,7 +92,8 @@ export const DataProvider = ({ children }) => {
             count,
             setCount,
             isSelected,
-            setIsSelected
+            setIsSelected,
+            calcTotal
 
         }}>
             {children}

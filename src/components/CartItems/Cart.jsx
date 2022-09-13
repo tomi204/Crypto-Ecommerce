@@ -21,14 +21,15 @@ const Cart = () => {
 
   }
 
-  function decreaseProduct(id, tittle, cover, desc, price, stock) {
+  function decreaseProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
       tittle,
       cover,
       desc,
       price,
-      stock
+      stock,
+      category
     }
     decreaseQty(product)
   }

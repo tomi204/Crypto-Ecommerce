@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { DataContext } from "../context";
 const ProductDetails = () => {
   // datacontext from context and get data from api 
-  const { blogs, setBlogs, addToCart } = useContext(DataContext);
+  const { blogs, setBlogs, addToCart, decreaseQty } = useContext(DataContext);
   const { id } = useParams();
   // const productsId = GetAll();
   function createProduct(id, tittle, cover, desc, price, stock, category) {
@@ -21,18 +21,20 @@ const ProductDetails = () => {
       category
     }
     addToCart(product)
-    console.log(addToCart)
+
   }
-  function decreaseProduct(id, tittle, cover, desc, price, stock) {
+  function decreaseProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
       tittle,
       cover,
       desc,
       price,
-      stock
+      stock,
+      category
     }
     decreaseQty(product)
+    console.log(decreaseProduct)
   }
 
   return (

@@ -38,13 +38,15 @@ const Cart = () => {
   return (
 
     <div className="cartTittle">
-      <h2>Tu carrito</h2>
+
 
       <Container className="containerProds">
         {
           CartItem.length === 0 ?
             <div className="vacio">
-              <p>Agrega productos al carrito </p>
+              <h1>Tu carrito esta vacio</h1>
+              <Link to={"../Productos"}> Ir a productos </Link>
+
 
             </div>
             :
@@ -52,6 +54,8 @@ const Cart = () => {
               {CartItem.map((item) => (
                 <div>
                   <h1>{item.tittle}</h1>
+                  <img src={item.cover} alt="" className="cart-Item-Image" />
+
                   <button className="eliminar" onClick={() => deleteQty(item.id)}>eliminar producto</button>
                   <button className="btnA" onClick={() => createProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>+</button>
                   <h1>{item.qty}</h1>
@@ -60,9 +64,6 @@ const Cart = () => {
               ))}
             </>
         }
-
-
-
 
       </Container>
 

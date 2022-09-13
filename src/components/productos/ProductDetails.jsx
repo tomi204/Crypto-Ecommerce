@@ -1,7 +1,6 @@
 import React from "react";
 import "./productosC.css";
 import { Link } from "react-router-dom";
-import Contador from "../CartItems/Contador";
 import { useParams } from "react-router-dom";
 import { GetAll } from "../Api/api";
 import { useContext } from "react";

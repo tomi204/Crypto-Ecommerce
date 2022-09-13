@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 const SlideCard = () => {
   //slider settings
   const settings = {
+    arrows: false,
     dots: false,
     fade: true,
     infinite: true,

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import "./Cart.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
 import { DataContext } from "../context";
+import Form from "./Form";
 const Cart = () => {
   // data context from context
   const { CartItem, setCartItem, addToCart, decreaseQty, deleteQty, count, setCount, calcTotal, totalQtty } = useContext(DataContext);
@@ -42,6 +43,7 @@ const Cart = () => {
     <div className="cartTittle">
 
 
+
       <Container className="containerProds">
         {
           CartItem.length === 0 ?
@@ -53,6 +55,8 @@ const Cart = () => {
             </div>
             :
             <>
+
+
               {CartItem.map((item) => (
                 <div className="item-products" key={item}>
                   <h3>{item.tittle}</h3>
@@ -62,25 +66,16 @@ const Cart = () => {
                   <button className="btnN" onClick={() => decreaseProduct(item.id, item.tittle, item.price, item.cover, item.category, item.stock, item.desc)}>-</button>
                   <h2 className="contador">{item.qty}</h2>
                   <h2>${item.qty * item.cover}</h2>
-                  <h3>Precio total:${calcTotal(totalQtty)}</h3>
                   <button className="eliminar" onClick={() => deleteQty(item.id)}>eliminar producto</button>
-
+                  <Form />
                 </div>
 
-              ))}
+              ))}<h3>Precio total:${calcTotal(totalQtty)}</h3>
             </>
         }
 
       </Container>
 
-
-      {CartItem.length === 0 ?
-        <></>
-        :
-        <div className="cartBottom">
-
-        </div>
-      }
     </div>
   );
 };

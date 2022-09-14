@@ -1,7 +1,6 @@
 import { DB } from "./Firebase";
 import { collection, Firestore, getDocs, getDoc } from "firebase/firestore";
 import { useContext, useEffect } from "react";
-import { useState } from "react";
 import { DataContext } from "../context";
 
 export function GetAll() {

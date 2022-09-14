@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { DataContext } from "../context";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { mapLinear } from "three/src/math/MathUtils";
 
 const Cart = () => {
   // data context from context
@@ -46,11 +47,12 @@ const Cart = () => {
     total: calcTotal()
   }
   function createOrder() {
-    const db = getFirestore();
+    const db = getFirestore(app);
     const orders = collection(db, "orders");
     addDoc(orders, order).then(({ id }) => alert("Tu se te mandara un mail para que termines tu compra " + (id)))
 
   }
+  console.log("Lo Ordenado es", createOrder)
 
 
   return (
@@ -78,26 +80,35 @@ const Cart = () => {
                   <button className="eliminar" onClick={() => deleteQty(item.id)}>eliminar producto</button>
                   <h1>Terminar compra</h1>
 
+
+
                 </div>
-
-              ))}<h3>Precio total:${calcTotal()}</h3>
-
-              <form action="submit">
+              ))}<h3>Precio total:${calcTotal}</h3>
+              <form>
                 <label>Nombre y Apellido</label>
-                <input type='text' placeholder='Nombre y apellido' />
+                <input type='text' placeholder='Nombre y apellido' required />
 
                 <label>Email</label>
-                <input type='email' name='mail' placeholder='Email' />
+                <input type='email' name='mail' placeholder='Email' required />
 
                 <label>Direccion</label>
                 <input type='text' placeholder='Direccion' />
-                <button onClick={createOrder}>Emitir compra</button>
+
+                <button className="btn-comprar" onClick={createOrder}>finalizar compra</button>
               </form>
             </>
 
         }
 
       </Container>
+
+      {CartItem.length === 0 ?
+        <> <h1>Tu carrito esta vacio</h1></>
+        :
+        <div className="cartBottom">
+          <h1>Tu carrito esta vacio</h1>
+        </div>
+      }
 
     </div >
   );

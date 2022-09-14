@@ -51,8 +51,8 @@ const Cart = () => {
   const createOrder = () => {
     const db = getFirestore();
     const ordersC = collection(db, "ordersEcommerce");
-    addDoc(ordersC, order).then(({ id }) => console.log(id))
-    refreshPage()
+    addDoc(ordersC, order).then(({ id }) => alert("tu numero de orden es " + (id)))
+
   }
 
 

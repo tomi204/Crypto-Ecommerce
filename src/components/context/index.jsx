@@ -48,7 +48,7 @@ export const DataProvider = ({ children }) => {
     }
     const totalQtty = () => {
         let total = CartItem.map(item => totalQttyPerItem(item.id));
-        return total.reduce((prev, curr) => prev + curr);
+
     }
 
     const calcTotal = () => {

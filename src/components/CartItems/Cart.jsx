@@ -23,7 +23,9 @@ const Cart = () => {
 
 
   }
-
+  const refreshPage = () => {
+    window.location.reload();
+  }
   function decreaseProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
@@ -50,7 +52,7 @@ const Cart = () => {
     const db = getFirestore(app);
     const orders = collection(db, "orders");
     addDoc(orders, order).then(({ id }) => alert("Tu se te mandara un mail para que termines tu compra " + (id)))
-
+    refreshPage()
   }
   console.log("Lo Ordenado es", createOrder)
 
@@ -61,10 +63,10 @@ const Cart = () => {
 
       <Container className="containerProds">
         {
-          CartItem.length === 0 ?
+          CartItem.length == 0 ?
             <div className="vacio">
               <h2>Tu carrito esta vacio</h2>
-              <Link to={"../Productos"}>Ir a productos</Link>
+              <Link to={"./Productos"}>Ir a productos</Link>
             </div>
             :
             <>
@@ -102,13 +104,6 @@ const Cart = () => {
 
       </Container>
 
-      {CartItem.length === 0 ?
-        <> <h1>Tu carrito esta vacio</h1></>
-        :
-        <div className="cartBottom">
-          <h1>Tu carrito esta vacio</h1>
-        </div>
-      }
 
     </div >
   );

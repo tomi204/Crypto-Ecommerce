@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-
+import "./MetaBtn.css"
 export default function MetaBtn() {
   const [buttonText, setButtonText] = useState('Connect wallet')
   const [account, setAccount] = useState(null)
@@ -12,7 +12,7 @@ export default function MetaBtn() {
           setButtonText(null)
         })
         .catch(error => {
-          setButtonText(error.message)
+          setButtonText("error al conectar")
         })
     } else {
       //metamask no instalado
@@ -21,7 +21,7 @@ export default function MetaBtn() {
   }
 
   return (
-    <button onClick={connectWallet}>{buttonText}{account}</button>
+    <button className='btn-M' onClick={connectWallet}>{buttonText}{account}</button>
   )
 }
 

@@ -12,7 +12,6 @@ import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
 import { DataProvider } from "./components/context";
-import MetaBtn from "./components/Metamask/MetaBtn";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <NavL />
-        <MetaBtn />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />

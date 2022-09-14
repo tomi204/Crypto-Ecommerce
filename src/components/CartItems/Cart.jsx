@@ -43,15 +43,15 @@ const Cart = () => {
       email: "juandoscuatro@gmail.com",
       addres: "Calle falsa 123"
     }, items: CartItem.map(product => ({ id: product.id, title: product.tittle, price: product.cover, quantity: product.qty, })),
-    total: calcTotal(totalQtty)
+    total: calcTotal()
   }
   const refreshPage = () => {
     window.location.reload()
   }
   const createOrder = () => {
     const db = getFirestore();
-    const ordersC = collection(db, "orders");
-    addDoc(ordersC, order).then(({ id }) => console.log(id))
+    const ordersC = collection(db, "ordersEcommerce");
+    addDoc(ordersC, order).then(({ id }) => alert(id))
   }
 
 
@@ -93,9 +93,10 @@ const Cart = () => {
 
                 <label>Direccion</label>
                 <input type='text' placeholder='Direccion' />
-
                 <button className="btn-comprar" onClick={createOrder}>finalizar compra</button>
+
               </form>
+
             </>
 
         }

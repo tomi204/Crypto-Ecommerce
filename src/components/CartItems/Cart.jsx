@@ -4,7 +4,6 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { DataContext } from "../context";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { mapLinear } from "three/src/math/MathUtils";
 
 const Cart = () => {
   // data context from context
@@ -23,9 +22,7 @@ const Cart = () => {
 
 
   }
-  const refreshPage = () => {
-    window.location.reload();
-  }
+
   function decreaseProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
@@ -46,15 +43,18 @@ const Cart = () => {
       email: "juandoscuatro@gmail.com",
       addres: "Calle falsa 123"
     }, items: CartItem.map(product => ({ id: product.id, title: product.tittle, price: product.cover, quantity: product.qty, })),
-    total: calcTotal()
+    total: calcTotal(totalQtty)
   }
-  function createOrder() {
-    const db = getFirestore(app);
+  const refreshPage = () => {
+    window.location.reload()
+  }
+  const createOrder = () => {
+    const db = getFirestore();
     const orders = collection(db, "orders");
-    addDoc(orders, order).then(({ id }) => alert("Tu se te mandara un mail para que termines tu compra " + (id)))
-    refreshPage()
+    addDoc(orders, order).then(({ id }) => console.log(id))
+
   }
-  console.log("Lo Ordenado es", createOrder)
+
 
 
   return (
@@ -81,8 +81,6 @@ const Cart = () => {
                   <h2>${item.qty * item.cover}</h2>
                   <button className="eliminar" onClick={() => deleteQty(item.id)}>eliminar producto</button>
                   <h1>Terminar compra</h1>
-
-
 
                 </div>
               ))}<h3>Precio total:${calcTotal}</h3>

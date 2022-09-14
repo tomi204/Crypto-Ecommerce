@@ -66,7 +66,7 @@ const Cart = () => {
           CartItem.length == 0 ?
             <div className="vacio">
               <h2>Tu carrito esta vacio</h2>
-              <Link to={"./Productos"}>Ir a productos</Link>
+              <Link to={"../Productos"}>Ir a productos</Link>
             </div>
             :
             <>

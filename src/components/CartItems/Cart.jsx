@@ -50,9 +50,8 @@ const Cart = () => {
   }
   const createOrder = () => {
     const db = getFirestore();
-    const orders = collection(db, "orders");
-    addDoc(orders, order).then(({ id }) => console.log(id))
-
+    const ordersC = collection(db, "orders");
+    addDoc(ordersC, order).then(({ id }) => console.log(id))
   }
 
 
@@ -83,7 +82,8 @@ const Cart = () => {
                   <h1>Terminar compra</h1>
 
                 </div>
-              ))}<h3>Precio total:${calcTotal}</h3>
+              ))}<h3>total: ${calcTotal(totalQtty)}</h3>
+              <br />
               <form>
                 <label>Nombre y Apellido</label>
                 <input type='text' placeholder='Nombre y apellido' required />

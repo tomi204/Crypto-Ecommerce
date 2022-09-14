@@ -46,11 +46,15 @@ export const DataProvider = ({ children }) => {
         let index = CartItem.map(item => item.id).indexOf(id);
         return CartItem[index].cover * CartItem[index].qty;
     }
+    //total quantity
     const totalQtty = () => {
         let total = CartItem.map(item => totalQttyPerItem(item.id));
+        if (total.length > 0) {
+            return total.reduce((prev, curr) => prev + curr);
+        }
 
     }
-
+    // calculando total
     const calcTotal = () => {
         return totalQtty();
     }

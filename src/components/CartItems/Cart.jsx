@@ -46,12 +46,12 @@ const Cart = () => {
     total: calcTotal()
   }
   const refreshPage = () => {
-    window.location.reload()
+    window.location.reload();
   }
   const createOrder = () => {
     const db = getFirestore();
     const ordersC = collection(db, "ordersEcommerce");
-    addDoc(ordersC, order).then(({ id }) => alert(id))
+    addDoc(ordersC, order).then(({ id }) => console.log(id)).finally(() => refreshPage())
   }
 
 
@@ -84,7 +84,7 @@ const Cart = () => {
                 </div>
               ))}<h3>total: ${calcTotal(totalQtty)}</h3>
               <br />
-              <form>
+              <div>
                 <label>Nombre y Apellido</label>
                 <input type='text' placeholder='Nombre y apellido' required />
 
@@ -94,9 +94,7 @@ const Cart = () => {
                 <label>Direccion</label>
                 <input type='text' placeholder='Direccion' />
                 <button className="btn-comprar" onClick={createOrder}>finalizar compra</button>
-
-              </form>
-
+              </div>
             </>
 
         }

@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import MetaBtn from "../Metamask/MetaBtn";
 function Navbar() {
   return (
     <nav className="navbar">
@@ -19,6 +20,7 @@ function Navbar() {
       <NavLink to={"./Cart"}>
         <FaShoppingCart></FaShoppingCart>
       </NavLink>
+      <MetaBtn />
     </nav>
   );
 }

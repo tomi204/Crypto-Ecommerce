@@ -85,22 +85,10 @@ const Cart = () => {
                 </div>
               ))}<h3>total: ${calcTotal(totalQtty)}</h3>
               <br />
-              <div className="formulario">
-                <h1>Terminar compra</h1>
-                <label>Nombre y Apellido</label>
-                <input type='text' placeholder='Nombre y apellido' required />
 
-                <label>Email</label>
-                <input type='email' name='mail' placeholder='Email' required />
-                <br />
-                <label>Direccion</label>
-                <input type='text' placeholder='Direccion' />
-                <br />
-                <br />
-                <br />
-                <button className="btn-comprar" onClick={createOrder}> terminar compra</button>
+              <button className="btn-comprar" onClick={createOrder}> terminar compra</button>
 
-              </div>
+
             </>
 
         }

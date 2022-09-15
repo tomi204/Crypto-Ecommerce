@@ -8,9 +8,9 @@
 }
 
 .div-product {
-  width: 100%;
+  width: 95%;
   max-width: 250px;
-  height: 100%;
+  height: 90%;
   border-radius: 12px;
   background-color: #ffffff;
   box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
@@ -26,6 +26,13 @@
 }
 .link-detalles {
   align-items: center;
+}
+.productos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .img-products {
@@ -55,13 +62,20 @@
 }
 .list-item {
   display: list-item;
-  color: white;
+  color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
+  list-style: none;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
 }
 .img-details {
-  position: relative;
-  width: 350px;
+  width: 24%;
+  height: 30%;
+  border-radius: 12px;
 }
 .box-items {
   display: inline-flex;

@@ -38,7 +38,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="productos" >
+    <div className="productos">
       {blogs && blogs.filter(item => item.id === Number(id)).map((item) => {
         return (
           <div className="list-item" key={item.id}>

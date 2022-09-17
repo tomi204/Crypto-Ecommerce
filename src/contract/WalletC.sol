@@ -7,6 +7,10 @@ contract WalletC {
     constructor() {
         owner = msg.sender;
     }
+    modifier onlyOwner() {
+        require(msg.sender == owner, "You are not the owner");
+        _;
+    }
     function deposit() public payable {
         balances[msg.sender] += msg.value;
     }

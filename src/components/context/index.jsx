@@ -84,6 +84,10 @@ export const DataProvider = ({ children }) => {
     }
 
 
+    // wallet pago
+    
+
+
     return (
         <DataContext.Provider value={{
             blogs,

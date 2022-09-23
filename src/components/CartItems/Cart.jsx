@@ -46,7 +46,7 @@ const Cart = () => {
     total: calcTotal()
   }
   const refreshPage = () => {
-    window.location.reload(false);
+    window.location.reload(true);
   }
   const createOrder = () => {
     const db = getFirestore();

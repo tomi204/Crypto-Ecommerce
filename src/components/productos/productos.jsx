@@ -8,7 +8,7 @@ import { DataContext } from "../context";
 export default function Productos() {
   // datacontext from context and get data from api
   const productosA = GetAll();
-  const { blogs, setBlogs, addToCart } = useContext(DataContext);
+  const { blogs, setBlogs, addToCart, getEthPrice } = useContext(DataContext);
   // render products and link to product details
   function createProduct(id, tittle, cover, desc, price, stock) {
     let product = {

@@ -55,10 +55,13 @@ export const DataProvider = ({ children }) => {
 
     }
     // calculando total
+ 
     const calcTotal = () => {
-        return totalQtty();
+        return totalQtty ();
     }
-
+   
+    
+ 
     // delete item from cart
     const decreaseQty = (blog) => {
 
@@ -84,6 +87,17 @@ export const DataProvider = ({ children }) => {
     }
 
 
+    //eth api
+    const  getEthPrice =  async ()=> {
+        const response = await fetch("https://api.coinlore.net/api/ticker/?id=80");
+        const data = await response.json(); 
+        const parseNumber1 = data[0].price_usd;
+        const parseNumber2 = parseInt(parseNumber1);
+        return parseNumber2;
+    }
+    const ethPrice = getEthPrice.toString();
+   console.log(ethPrice);
+    
     return (
         <DataContext.Provider value={{
             blogs,
@@ -97,7 +111,8 @@ export const DataProvider = ({ children }) => {
             setCount,
             isSelected,
             setIsSelected,
-            calcTotal
+            calcTotal,
+            getEthPrice
 
         }}>
             {children}

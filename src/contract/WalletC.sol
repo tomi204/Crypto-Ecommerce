@@ -1,32 +1,28 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: GPL-3.0
 
-contract WalletC {
-    address public owner;
-    mapping(address => uint256) public balances;
+pragma solidity >=0.7.0 <0.9.0;
 
-    constructor() {
-        owner = msg.sender;
+contract Test{
+    string public id;
+    string public name;
+    string public description;
+    address payable public owner;
+    string public state = 'opened';
+    uint public founds;
+    uint public foundraisingGoal;
+
+    constructor(string memory _id, string memory _name, string memory _description, uint _foundraisingGoal){
+        id = _id;
+        name = _name;
+        description = _description;
+        foundraisingGoal = _foundraisingGoal;
+        owner = payable(msg.sender);
     }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "You are not the owner");
-        _;
+    function foundProject() public payable{
+        owner.transfer(msg.value);
+        founds += msg.value;
     }
-
-    function deposit() public payable {
-        balances[msg.sender] += msg.value;
-    }
-
-    function withdraw(uint256 _amount) public {
-        require(balances[msg.sender] >= _amount);
-        balances[msg.sender] -= _amount;
-        payable(msg.sender).transfer(_amount);
-    }
-
-    function transfer(address _to, uint256 _amount) public {
-        require(balances[msg.sender] >= _amount);
-        balances[msg.sender] -= _amount;
-        balances[_to] += _amount;
+    function changeProjectState(string calldata newSate) public{
+        state = newSate;
     }
 }

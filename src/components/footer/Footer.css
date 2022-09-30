@@ -1,0 +1,30 @@
+footer {
+  background-color: rgb(111, 47, 196);
+  color: white;
+  max-height: 50px;
+  width: 100%;
+  display: flex;
+  bottom: 0;
+
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: 100%;
+}
+.footer-container a {
+  color: white;
+  font-size: 22px;
+  margin-left: 50px;
+}
+.footer-container a:hover {
+  transform: scale(1.3);
+}

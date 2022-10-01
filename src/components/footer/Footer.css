@@ -30,3 +30,18 @@
 .footer-container a:hover {
   transform: scale(1.3);
 }
+@media screen and (max-width: 550px) {
+  .footer-container {
+    width: 100%;
+    font-size: 10px;
+    justify-content: space-around;
+  }
+  .derechos {
+    font-size: 10px;
+    display: none;
+  }
+  .footer-container a {
+    margin-left: 0px;
+    font-size: 15px;
+  }
+}

@@ -26,6 +26,7 @@
 }
 .link-detalles {
   align-items: center;
+  border-radius: 15px;
 }
 .productos {
   width: 100%;
@@ -50,13 +51,14 @@
   color: white;
   width: 30px;
   height: 25px;
-  border-radius: 4px;
+  border-radius: 15px;
 }
 .boton-detalles {
   width: 75px;
   height: 55px;
   background-color: rgb(0, 0, 0);
-  border-radius: 4px;
+  border-radius: 15px;
+
   color: white;
   cursor: pointer;
 }
@@ -91,27 +93,30 @@
   background-color: #ffffff;
   width: 30px;
   height: 25px;
+  border-radius: 15px;
 }
 .addCart-D:hover {
-  transform-box: scale(2);
-  background-color: aqua;
-  color: #ffffff;
+  transform-box: scale(1.2);
+
+  color: #0ef092;
 }
 .btnN {
   background-color: #ffffff;
   width: 50px;
   height: 35px;
+  border-radius: 15px;
 }
 .link-cart {
+  color: black;
   cursor: pointer;
   border-color: white;
-  border-radius: 4px;
+  border-radius: 15px;
 }
 @media (max-width: 550px) {
   .product-d {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: smaller;
   }
   .slick-arrow {
     display: none;

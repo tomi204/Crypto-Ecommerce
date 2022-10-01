@@ -3,7 +3,10 @@ import { useState } from "react";
 import "./MetaBtn.css";
 import { useContext } from "react";
 import { DataContext } from "../context";
+import Web3 from "web3";
 export default function MetaBtn() {
+  const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+
   const { account, setAccount, setButtonText, buttonText } =
     useContext(DataContext);
   const connectWallet = () => {
@@ -22,12 +25,30 @@ export default function MetaBtn() {
       setButtonText("you need to install one wallet");
     }
   };
+  let address = account;
+
+  let balance;
+
+  async function checkBalance() {
+    try {
+      web3.eth.getBalance(address).then((balanceInWei) => {
+        balance = web3.utils.fromWei(balanceInWei);
+        console.log("Balance in wei:", balanceInWei);
+        console.log("Balance in ETH:", balance);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  checkBalance();
 
   return (
     <div className="container">
       <button className="btn-M" onClick={connectWallet}>
         {buttonText}
         {account}
+        {checkBalance}
       </button>
     </div>
   );

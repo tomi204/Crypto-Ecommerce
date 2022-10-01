@@ -90,7 +90,6 @@ export const DataProvider = ({ children }) => {
     return parseNumber2;
   };
   const ethPrice = getEthPrice.toString();
-  console.log(ethPrice);
 
   return (
     <DataContext.Provider

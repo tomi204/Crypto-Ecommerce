@@ -116,6 +116,7 @@ const Cart = () => {
                 <h3>{item.tittle}</h3>
                 <img src={item.desc} alt="" className="cart-Item-Image" />
                 <br></br>
+
                 <button
                   className="btnA"
                   onClick={() =>
@@ -155,12 +156,14 @@ const Cart = () => {
                 </button>
               </div>
             ))}
-            <h3>total: ${calcTotal(totalQtty)}</h3>
-            <br />
+            <div className="buy-div">
+              <h3>total: ${calcTotal(totalQtty)}</h3>
+              <br />
 
-            <button className="btn-M" onClick={sendTransaction}>
-              comprar
-            </button>
+              <button className="btn-buy" onClick={sendTransaction}>
+                comprar
+              </button>
+            </div>
           </>
         )}
       </Container>

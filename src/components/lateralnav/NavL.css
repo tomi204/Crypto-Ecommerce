@@ -1,11 +1,13 @@
 .navl {
   display: flex;
   position: fixed;
-  top: 56%;
+  top: 16%;
+
   justify-content: center;
   align-items: flex-end;
-  width: 40px;
-  height: 110px;
+  width: 50px;
+
+  z-index: 1;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -25,8 +27,9 @@
   justify-content: center;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .navl {
+    display: none;
     width: 20px;
     top: 30%;
     align-items: center;

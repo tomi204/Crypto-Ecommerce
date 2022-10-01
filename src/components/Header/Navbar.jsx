@@ -13,9 +13,6 @@ function Navbar() {
         <NavLink to={"./Productos"}>
           <li>PRODUCTOS</li>
         </NavLink>
-        <NavLink to={"/nosotros"}>
-          <li>NOSOTROS</li>
-        </NavLink>
       </ul>
       <NavLink to={"./Cart"}>
         <FaShoppingCart></FaShoppingCart>

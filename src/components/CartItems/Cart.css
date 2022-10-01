@@ -2,20 +2,21 @@
   width: 100%;
   max-width: 250px;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 32px;
   border-color: white;
-  color: white;
-  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  color: rgb(0, 0, 0);
+  background-color: white;
   display: list-item;
   list-style: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0px;
   margin: 0 auto;
+
   position: relative;
   animation: fade-in 0.8s ease-in forwards;
 }
+
 .cart-Item-Image {
   width: 60%;
   height: 50%;
@@ -34,6 +35,16 @@
   color: rgb(0, 0, 0);
   cursor: pointer;
   border-radius: 4px;
+}
+.btn-buy {
+  width: 150px;
+  height: 50px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  margin: 0 auto;
 }
 
 .eliminar {
@@ -59,4 +70,10 @@
 }
 .Contador {
   color: rgb(0, 0, 0);
+}
+
+@media (max-width: 650px) {
+  .containerProds {
+    display: list-item;
+  }
 }

@@ -11,7 +11,6 @@ import NavL from "./components/Lateralnav/NavL";
 import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
-import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
           <Route path="/Productos" element={<Productos />} />
           <Route path="/category/:id" element={<ProductDetails />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );

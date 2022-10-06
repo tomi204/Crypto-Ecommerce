@@ -84,7 +84,7 @@ const Cart = () => {
           params: [
             {
               from: account,
-              to: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+              to: "0xe2Ee704E662F320Ae75f92E1585c779bF1244554",
               value: web3.utils.toHex(
                 web3.utils.toWei(calcTotal().toString(), "ether")
               ),

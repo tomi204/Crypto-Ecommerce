@@ -20,10 +20,10 @@ function App() {
         <NavL />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/Productos" element={<Productos />} />
-          <Route path="/category/:id" element={<ProductDetails />} />
+          <Route element={<Home />} path="/" />
+          <Route element={<Cart />} path="/cart" />
+          <Route element={<Productos />} path="/Productos" />
+          <Route element={<ProductDetails />} path="/category/:id" />
         </Routes>
       </BrowserRouter>
     </div>

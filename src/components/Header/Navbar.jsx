@@ -13,11 +13,16 @@ function Navbar() {
         <NavLink to={"./Productos"}>
           <li>PRODUCTOS</li>
         </NavLink>
+
+        <NavLink to={"./Cart"}>
+          <li>
+            <FaShoppingCart></FaShoppingCart>
+          </li>
+        </NavLink>
+        <li>
+          <MetaBtn />
+        </li>
       </ul>
-      <NavLink to={"./Cart"}>
-        <FaShoppingCart></FaShoppingCart>
-      </NavLink>
-      <MetaBtn />
     </nav>
   );
 }

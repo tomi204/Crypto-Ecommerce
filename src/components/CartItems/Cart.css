@@ -63,6 +63,9 @@
   cursor: pointer;
   border-radius: 4px;
 }
+.cartTittle {
+  margin-top: 50px;
+}
 
 .cartTittle,
 .vacio {

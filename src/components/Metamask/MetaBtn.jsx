@@ -15,7 +15,7 @@ export default function MetaBtn() {
         .request({ method: "eth_requestAccounts" })
         .then((result) => {
           setAccount(result[0]);
-          setButtonText(null);
+          setButtonText("Connected");
         })
         .catch((error) => {
           setButtonText("error al conectar");
@@ -47,8 +47,7 @@ export default function MetaBtn() {
     <div className="container">
       <button className="btn-M" onClick={connectWallet}>
         {buttonText}
-        {account}
-        {checkBalance}
+        <abbr title={account}></abbr>
       </button>
     </div>
   );

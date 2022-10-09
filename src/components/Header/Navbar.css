@@ -4,14 +4,16 @@
   width: 100%;
   font-weight: 900;
   height: 70px;
-  color: black;
-  background-color: rgb(209, 14, 209);
+  color: rgb(255, 255, 255);
+
   align-items: center;
   justify-content: center;
-  border-radius: 40px;
+  border-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 .ul-n {
-  width: 100%;
+  width: 50%;
   height: 30px;
   display: flex;
   justify-content: space-evenly;
@@ -25,16 +27,13 @@ li {
 a {
   font-weight: 900;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 30px;
 }
 @media (max-width: 550px) {
-  .ul-n {
-    font-size: smaller;
-  }
   li {
     list-style: none;
-    font-size: 10px;
+    font-size: 6px;
   }
   .navbar {
     width: 100%;

@@ -1,18 +1,18 @@
 .footer-main {
-  background-color: rgb(111, 47, 196);
-  color: white;
+  color: rgb(255, 255, 255);
   max-height: 40px;
   width: 100%;
   display: flex;
   position: fixed;
   bottom: 0;
-
   justify-content: space-around;
   align-items: center;
   font-size: 16px;
   font-weight: 900;
   padding: 10 10px;
-  border-radius: 20px;
+  border-color: white;
+  border-top-width: 5px;
+  border-top-style: solid;
 }
 
 .footer-container {
@@ -23,7 +23,7 @@
   height: 100%;
 }
 .footer-container a {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 22px;
   margin-left: 50px;
 }

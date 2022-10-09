@@ -49,7 +49,7 @@ const ProductDetails = () => {
                 <h1>{item.title}</h1>
                 <h3 className="desc-id">{item.desc}</h3>
                 <br></br>
-                <h2> {item.price} ethers</h2>
+                <h2> ${item.price} ether</h2>
                 <h2>Hay {item.stock} en stock</h2>
                 <br />
                 <button

@@ -66,11 +66,10 @@ const ProductDetails = () => {
                     )
                   }
                 >
-                  {" "}
-                  +{" "}
+                  +
                 </button>
                 <button
-                  className="btnN"
+                  className="btn-e"
                   onClick={() =>
                     decreaseProduct(
                       item.id,
@@ -90,10 +89,6 @@ const ProductDetails = () => {
                 <Link to={"/Cart"} className="link-cart">
                   Ir al carrito
                 </Link>
-                {/* //  :
-         //   <Contador onAdd={onAdd} /> */}
-
-                {/* } */}
               </div>
             );
           })}

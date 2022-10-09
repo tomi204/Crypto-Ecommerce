@@ -33,7 +33,7 @@ a {
 @media (max-width: 550px) {
   li {
     list-style: none;
-    font-size: 6px;
+    font-size: 10px;
   }
   .navbar {
     width: 100%;

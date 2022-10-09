@@ -1,6 +1,6 @@
 .section-products {
   width: 96%;
-  margin-left: 50px;
+
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -95,11 +95,7 @@
   height: 25px;
   border-radius: 15px;
 }
-.addCart-D:hover {
-  transform-box: scale(1.2);
 
-  color: #0ef092;
-}
 .btnN {
   background-color: #ffffff;
   width: 50px;
@@ -117,6 +113,17 @@
     display: flex;
     align-items: center;
     font-size: smaller;
+  }
+  .productos {
+    margin-bottom: 50px;
+  }
+  .div-product {
+    width: 150px;
+    height: 200px;
+    font-size: 10px;
+  }
+  .addC-P {
+    display: none;
   }
   .slick-arrow {
     display: none;

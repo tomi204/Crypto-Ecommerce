@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { DataContext } from "../context";
 import Web3 from "web3";
 export default function MetaBtn() {
-  const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+  const web3 = new Web3(Web3.givenProvider || REACT_APP_WEB3APIKEY);
 
   const { account, setAccount, setButtonText, buttonText } =
     useContext(DataContext);

@@ -8,7 +8,7 @@ import Web3 from "web3";
 import { useState } from "react";
 const Cart = () => {
   // data context from context
-  const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+  const web3 = new Web3(Web3.givenProvider || REACT_APP_WEB3APIKEY);
   const {
     CartItem,
     setCartItem,

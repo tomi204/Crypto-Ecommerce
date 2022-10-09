@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap");
 * {
-  font-family: "Saira", sans-serif;
+  font-family: "Noto Sans Mono", monospace;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;

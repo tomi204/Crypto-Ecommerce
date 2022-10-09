@@ -28,17 +28,14 @@ a {
   font-weight: 900;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  padding: 15px;
+  padding: 3px;
 }
 @media (max-width: 550px) {
   li {
     list-style: none;
-    font-size: 10px;
+    font-size: 8px;
   }
-  .navbar {
-    max-width: 290px;
-    height: 50px;
-  }
+
   .ul-n {
     width: 80%;
     justify-content: space-around;

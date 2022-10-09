@@ -52,6 +52,10 @@
   width: 30px;
   height: 25px;
   border-radius: 10px;
+  cursor: pointer;
+}
+.addC-P:hover {
+  transform: scale(1.2);
 }
 .boton-detalles {
   width: 75px;
@@ -61,6 +65,9 @@
 
   color: white;
   cursor: pointer;
+}
+.boton-detalles:hover {
+  transform: scale(1.2);
 }
 .list-item {
   display: list-item;
@@ -95,12 +102,17 @@
   height: 25px;
   border-radius: 10px;
 }
-
+.addCart-D:hover {
+  transform: scale(1.2);
+}
 .btn-e {
   background-color: #ffffff;
   width: 30px;
   height: 25px;
   border-radius: 10px;
+}
+.btn-e:hover {
+  transform: scale(1.2);
 }
 .link-cart {
   color: black;

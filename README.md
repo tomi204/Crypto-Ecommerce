@@ -1,1 +1,1 @@
-E-commerce creado con React js, Firebase, Css y Web3 js.
+E-commerce creado con React js, Firebase, Css y ethers.js.

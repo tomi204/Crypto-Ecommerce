@@ -11,7 +11,6 @@ import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { infuraProvider } from "wagmi/providers/infura";
 import { publicProvider } from "wagmi/providers/public";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Navbar from "./components/Header/Navbar";
 import NavL from "./components/Lateralnav/NavL";
 import Productos from "./components/Productos/Productos";
@@ -41,7 +40,7 @@ function App() {
           <RainbowKitProvider chains={chains}>
             <Navbar />
             <NavL />
-            <ConnectButton />
+
             <Routes>
               <Route element={<Home />} path="/" />
               <Route element={<Cart />} path="/cart" />

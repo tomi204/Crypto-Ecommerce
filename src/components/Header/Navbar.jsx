@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 function Navbar() {
   return (
     <nav className="navbar">
@@ -18,7 +19,9 @@ function Navbar() {
             <FaShoppingCart></FaShoppingCart>
           </li>
         </NavLink>
-        <li></li>
+        <li>
+          <ConnectButton />
+        </li>
       </ul>
     </nav>
   );

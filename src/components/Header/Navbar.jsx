@@ -20,7 +20,7 @@ function Navbar() {
           </li>
         </NavLink>
         <li>
-          <ConnectButton />
+          <ConnectButton showBalance={false} />
         </li>
       </ul>
     </nav>

@@ -7,7 +7,11 @@ import {
   Routes,
 } from "react-router-dom";
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { infuraProvider } from "wagmi/providers/infura";
 import { publicProvider } from "wagmi/providers/public";
@@ -17,7 +21,7 @@ import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum, chain.goerli],
   [
     infuraProvider({ apiKey: process.env.REACT_APP_WEB3APIKEY }),
     publicProvider(),
@@ -37,7 +41,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <WagmiConfig client={wagmiClient}>
-          <RainbowKitProvider chains={chains}>
+          <RainbowKitProvider
+            modalSize="compact"
+            theme={darkTheme({
+              ...darkTheme.accentColors.green,
+            })}
+            chains={chains}
+          >
             <Navbar />
             <NavL />
 

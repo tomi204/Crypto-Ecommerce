@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../context";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import Web3 from "web3";
-import { useState } from "react";
 import { useSendTransaction } from "wagmi";
 const Cart = () => {
   // data context from context
@@ -19,10 +18,6 @@ const Cart = () => {
     setCount,
     calcTotal,
     totalQtty,
-    account,
-    setAccount,
-    setButtonText,
-    buttonText,
   } = useContext(DataContext);
   function createProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {

@@ -23,7 +23,11 @@ import ProductDetails from "./components/Productos/ProductDetails";
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum, chain.goerli],
   [
-    infuraProvider({ apiKey: process.env.REACT_APP_WEB3APIKEY }),
+    infuraProvider({
+      apiKey: process.env.REACT_APP_WEB3APIKEY,
+      stallTimeout: 1_000,
+    }),
+
     publicProvider(),
   ]
 );

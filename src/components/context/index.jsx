@@ -9,8 +9,6 @@ export const DataProvider = ({ children }) => {
   const [CartItem, setCartItem] = useState([]);
   const [count, setCount] = useState(1);
   const [isSelected, setIsSelected] = useState(true);
-  const [buttonText, setButtonText] = useState("Connect wallet");
-  const [account, setAccount] = useState(null);
 
   // add to cart function
   const addToCart = (blog) => {

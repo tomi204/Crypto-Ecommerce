@@ -6,9 +6,9 @@ import { DataContext } from "../context";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import Web3 from "web3";
 import { useState } from "react";
+import { useSendTransaction } from "wagmi";
 const Cart = () => {
   // data context from context
-  const web3 = new Web3(Web3.givenProvider || REACT_APP_WEB3APIKEY);
   const {
     CartItem,
     setCartItem,
@@ -65,42 +65,15 @@ const Cart = () => {
     })),
     total: calcTotal(),
   };
-  const refreshPage = () => {
-    window.location.reload(true);
-  };
-  const createOrder = () => {
-    const db = getFirestore();
-    const ordersC = collection(db, "ordersEcommerce");
-    addDoc(ordersC, order).then(({ id }) =>
-      alert("tu numero de orden es " + id)
-    );
-  };
-
-  const sendTransaction = () => {
-    if (window.ethereum && window.ethereum.isMetaMask) {
-      window.ethereum
-        .request({
-          method: "eth_sendTransaction",
-          params: [
-            {
-              from: account,
-              to: "0xe2Ee704E662F320Ae75f92E1585c779bF1244554",
-              value: web3.utils.toHex(
-                web3.utils.toWei(calcTotal().toString(), "ether")
-              ),
-              gas: "0x5208",
-            },
-          ],
-        })
-        .then((result) => {
-          setButtonText("Transaction sent");
-        })
-        .catch((error) => {
-          setButtonText("Transaction error");
-        });
-    }
-  };
-
+  const { sendTransaction } = useSendTransaction({
+    request: {
+      to: "0xe2Ee704E662F320Ae75f92E1585c779bF1244554",
+      value: calcTotal("ether").toString(),
+    },
+    onSuccess: (txHash) => {
+      console.log("Transaction sent", txHash);
+    },
+  });
   return (
     <div className="cartTittle">
       <Container className="containerProds">

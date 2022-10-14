@@ -21,7 +21,7 @@ import Productos from "./components/Productos/Productos";
 import Cart from "./components/CartItems/Cart";
 import ProductDetails from "./components/Productos/ProductDetails";
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum, chain.goerli],
+  [chain.mainnet, chain.polygon, chain.goerli, chain.arbitrum],
   [
     infuraProvider({
       apiKey: process.env.REACT_APP_WEB3APIKEY,

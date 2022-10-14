@@ -105,10 +105,6 @@ export const DataProvider = ({ children }) => {
         setIsSelected,
         calcTotal,
         getEthPrice,
-        account,
-        setAccount,
-        buttonText,
-        setButtonText,
       }}
     >
       {children}

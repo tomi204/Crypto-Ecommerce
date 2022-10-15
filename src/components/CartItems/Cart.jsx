@@ -3,13 +3,9 @@ import "./Cart.css";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { DataContext } from "../context";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
-import Web3 from "web3";
-import { useAccount, useSendTransaction } from "wagmi";
+import { chainId, useAccount, useSendTransaction } from "wagmi";
 import { ethers } from "ethers";
 const Cart = () => {
-  const connection = new ethers.providers.JsonRpcBatchProvider("");
-  const { address } = useAccount();
   // data context from context
   const {
     CartItem,
@@ -63,20 +59,23 @@ const Cart = () => {
     })),
     total: calcTotal(),
   };
-  const total = calcTotal().toString();
-  const gasPrice = connection.getGasPrice();
-  const recipient = "0xe2Ee704E662F320Ae75f92E1585c779bF1244554";
-  const tx = {
-    request: {
-      from: address,
-      to: recipient,
-      value: ethers.utils.parseUnits(total("ether")),
-      gasPrice: gasPrice,
-    },
-    onSuccess: (txHash) => {
-      console.log("Transaction sent", txHash);
-    },
-  };
+
+  const connection = new ethers.providers.JsonRpcBatchProvider(
+    process.env.REACT_APP_LINK
+  );
+  function send() {
+    const recipient = "0xe2Ee704E662F320Ae75f92E1585c779bF1244554";
+    const { address } = useAccount();
+    const {} = useSendTransaction({
+      request: {
+        from: address,
+        to: recipient,
+        value: ethers.utils.parseEther(calcTotal().toString()),
+      },
+      onSuccess: () => alert("Transaction successful"),
+    });
+  }
+
   return (
     <div className="cartTittle">
       <Container className="containerProds">
@@ -136,7 +135,7 @@ const Cart = () => {
               <h3>total: ${calcTotal(totalQtty)}</h3>
               <br />
 
-              <button className="btn-buy" onClick={tx}>
+              <button className="btn-buy" onClick={send}>
                 comprar
               </button>
             </div>

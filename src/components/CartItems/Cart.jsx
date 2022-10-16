@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../context";
 import { useAccount, useSendTransaction } from "wagmi";
 import { ethers } from "ethers";
+
 import { Network, Alchemy } from "alchemy-sdk";
 const Cart = () => {
   // data context from context
@@ -64,28 +65,12 @@ const Cart = () => {
   //alchemy
 
   const settings = {
-    apiKey: "MyHDEnE8FuPQjjJxzJu3sGTLgrqjZbrS",
+    apiKey: process.env.REACT_APP_ALCHEAPIKEY,
     network: Network.MATIC_MAINNET,
   };
 
   const alchemy = new Alchemy(settings);
-
-  // Get the latest block
-  const latestBlock = alchemy.core.getBlockNumber();
-
   // Get all outbound transfers for a provided address
-  alchemy.core
-    .getTokenBalances("0x994b342dd87fc825f66e51ffa3ef71ad818b6893")
-    .then(console.log);
-
-  // Get all the NFTs owned by an address
-  const nfts = alchemy.nft.getNftsForOwner("0xshah.eth");
-
-  // Listen to all new pending transactions
-  alchemy.ws.on(
-    { method: "alchemy_pendingTransactions", fromAddress: "0xshah.eth" },
-    (res) => console.log(res)
-  );
 
   const provider = ethers.getDefaultProvider(network, {
     infura: process.env.REACT_APP_LINK,

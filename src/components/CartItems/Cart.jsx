@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Cart.css";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { isRouteErrorResponse, Link } from "react-router-dom";
 import { DataContext } from "../context";
 import { useAccount, useSendTransaction } from "wagmi";
 import { ethers } from "ethers";
@@ -19,7 +19,6 @@ const Cart = () => {
     setCount,
     calcTotal,
     totalQtty,
-    sendTransaction,
   } = useContext(DataContext);
   function createProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
@@ -71,6 +70,23 @@ const Cart = () => {
   // };
 
   //  const alchemy = new Alchemy(settings);
+
+  const provider = ethers.providers.getDefaultProvider(
+    process.env.REACT_APP_LINK
+  );
+  const { address } = useAccount();
+  const recipient = "0xe2Ee704E662F320Ae75f92E1585c779bF1244554";
+
+  const { sendTransaction } = useSendTransaction({
+    request: {
+      from: address,
+      to: recipient,
+      value:
+        ethers.utils.parseEther(calcTotal(totalQtty())?.toString()) || null,
+    },
+    onSuccess: () => alert("Transaction successful"),
+  });
+  console.log(totalQtty);
 
   return (
     <div className="cartTittle">

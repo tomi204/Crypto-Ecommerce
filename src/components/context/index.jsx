@@ -1,8 +1,6 @@
 import React from "react";
 import { createContext } from "react";
 import { useState } from "react";
-import { useAccount, useSendTransaction } from "wagmi";
-import { ethers } from "ethers";
 export const DataContext = createContext();
 
 // data provider context component
@@ -51,6 +49,8 @@ export const DataProvider = ({ children }) => {
     let total = CartItem.map((item) => totalQttyPerItem(item.id));
     if (total.length > 0) {
       return total.reduce((prev, curr) => prev + curr);
+    } else {
+      return 0;
     }
   };
   // calculando total
@@ -80,21 +80,17 @@ export const DataProvider = ({ children }) => {
   const deleteQty = (id) => {
     setCartItem(CartItem.filter((item) => item.id !== id));
   };
-  // blockchain code  - ethers js
 
-  const provider = ethers.providers.getDefaultProvider(
-    process.env.REACT_APP_LINK
-  );
-  const { address } = useAccount();
-  const recipient = "0xe2Ee704E662F320Ae75f92E1585c779bF1244554";
-  const { sendTransaction } = useSendTransaction({
-    request: {
-      from: address,
-      to: recipient,
-      value: ethers.utils.parseEther(calcTotal(totalQtty).toString()),
-    },
-    onSuccess: () => alert("Transaction successful"),
-  });
+  //eth api
+  const getEthPrice = async () => {
+    const response = await fetch("https://api.coinlore.net/api/ticker/?id=80");
+    const data = await response.json();
+    const parseNumber1 = data[0].price_usd;
+    const parseNumber2 = parseInt(parseNumber1);
+    return parseNumber2;
+  };
+  const ethPrice = getEthPrice.toString();
+
   return (
     <DataContext.Provider
       value={{
@@ -110,7 +106,8 @@ export const DataProvider = ({ children }) => {
         isSelected,
         setIsSelected,
         calcTotal,
-        sendTransaction,
+        getEthPrice,
+        totalQtty,
       }}
     >
       {children}

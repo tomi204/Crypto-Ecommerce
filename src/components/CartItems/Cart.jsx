@@ -64,30 +64,27 @@ const Cart = () => {
 
   //alchemy
 
-  const settings = {
-    apiKey: process.env.REACT_APP_ALCHEAPIKEY,
-    network: Network.MATIC_MAINNET,
-  };
+  // const settings = {
+  //   apiKey: process.env.REACT_APP_ALCHEAPIKEY,
+  //   network: Network.MATIC_MAINNET,
+  // };
 
-  const alchemy = new Alchemy(settings);
-  // Get all outbound transfers for a provided address
+  //  const alchemy = new Alchemy(settings);
 
-  const provider = ethers.getDefaultProvider(network, {
-    infura: process.env.REACT_APP_LINK,
-  });
+  const provider = ethers.providers.getDefaultProvider(
+    process.env.REACT_APP_LINK
+  );
   const { address } = useAccount();
   const recipient = "0xe2Ee704E662F320Ae75f92E1585c779bF1244554";
 
-  function send() {
-    const {} = useSendTransaction({
-      request: {
-        from: address,
-        to: recipient,
-        value: ethers.utils.parseEther(calcTotal().toString()),
-      },
-      onSuccess: () => alert("Transaction successful"),
-    });
-  }
+  const { sendTransaction } = useSendTransaction({
+    request: {
+      from: address,
+      to: recipient,
+      value: ethers.utils.parseEther(calcTotal(totalQtty).toString()),
+    },
+    onSuccess: () => alert("Transaction successful"),
+  });
 
   return (
     <div className="cartTittle">
@@ -148,7 +145,7 @@ const Cart = () => {
               <h3>total: ${calcTotal(totalQtty)}</h3>
               <br />
 
-              <button className="btn-buy" onClick={send}>
+              <button className="btn-buy" onClick={sendTransaction}>
                 comprar
               </button>
             </div>

@@ -21,6 +21,7 @@ const Cart = () => {
     calcTotal,
     totalQtty,
   } = useContext(DataContext);
+  //agregar producto al carrito
   function createProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
@@ -33,7 +34,7 @@ const Cart = () => {
     };
     addToCart(product);
   }
-
+  // sacar producto de carrito
   function decreaseProduct(id, tittle, cover, desc, price, stock, category) {
     let product = {
       id,
@@ -46,7 +47,7 @@ const Cart = () => {
     };
     decreaseQty(product);
   }
-
+  //order -- codigo viejo
   const order = {
     buyer: {
       name: "Juan",
@@ -62,8 +63,7 @@ const Cart = () => {
     })),
     total: calcTotal(),
   };
-  console.log(count);
-  //alchemy
+  // alerta personalizada compra exitosa
   const mostrarAlert = () => {
     swal({
       title: "Successful purchase",
@@ -72,6 +72,7 @@ const Cart = () => {
       button: "Ok",
     });
   };
+  //alerta personalizada compra fallida
   const mostrarAlertError = () => {
     swal({
       title: "Error when making a purchase",
@@ -81,19 +82,17 @@ const Cart = () => {
     });
   };
 
-  // const settings = {
-  //   apiKey: process.env.REACT_APP_ALCHEAPIKEY,
-  //   network: Network.MATIC_MAINNET,
-  // };
-
-  //  const alchemy = new Alchemy(settings);
-
+  //ethers provider
   const provider = ethers.providers.getDefaultProvider(
     process.env.REACT_APP_LINK
   );
+  //address provider de wagmi
   const { address } = useAccount();
+
+  //mi cuenta
   const recipient = "0xe2Ee704E662F320Ae75f92E1585c779bF1244554";
 
+  // send transaction function
   const { sendTransaction } = useSendTransaction({
     request: {
       from: address,

@@ -25,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "sweetalert": "^2.1.2",
     "wagmi": "^0.6.8",
     "web-vitals": "^2.1.4",
     "web3": "^1.8.0"

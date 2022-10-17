@@ -7,6 +7,7 @@ import { useAccount, useSendTransaction } from "wagmi";
 import { ethers } from "ethers";
 import { FaEthereum } from "react-icons/fa";
 import { Network, Alchemy } from "alchemy-sdk";
+import swal from "sweetalert";
 const Cart = () => {
   // data context from context
   const {
@@ -63,7 +64,14 @@ const Cart = () => {
   };
   console.log(count);
   //alchemy
-
+  const mostrarAlert = () => {
+    swal({
+      title: "Compra realizada con exito",
+      text: "Gracias por su compra",
+      icon: "success",
+      button: "Aceptar",
+    });
+  };
   // const settings = {
   //   apiKey: process.env.REACT_APP_ALCHEAPIKEY,
   //   network: Network.MATIC_MAINNET,
@@ -84,7 +92,8 @@ const Cart = () => {
       value:
         ethers.utils.parseEther(calcTotal(totalQtty())?.toString()) || null,
     },
-    onSuccess: () => alert("Transaction successful"),
+    onSuccess: () => mostrarAlert(),
+    onError: (error) => alert(error.message),
   });
 
   return (

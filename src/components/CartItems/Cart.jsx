@@ -66,12 +66,21 @@ const Cart = () => {
   //alchemy
   const mostrarAlert = () => {
     swal({
-      title: "Compra realizada con exito",
-      text: "Gracias por su compra",
+      title: "Successful purchase",
+      text: "Thank you for your purchase",
       icon: "success",
-      button: "Aceptar",
+      button: "Ok",
     });
   };
+  const mostrarAlertError = () => {
+    swal({
+      title: "Error when making a purchase",
+      text: "Insufficient funds",
+      icon: "error",
+      button: "Ok",
+    });
+  };
+
   // const settings = {
   //   apiKey: process.env.REACT_APP_ALCHEAPIKEY,
   //   network: Network.MATIC_MAINNET,
@@ -93,7 +102,7 @@ const Cart = () => {
         ethers.utils.parseEther(calcTotal(totalQtty())?.toString()) || null,
     },
     onSuccess: () => mostrarAlert(),
-    onError: (error) => alert(error.message),
+    onError: () => mostrarAlertError(),
   });
 
   return (

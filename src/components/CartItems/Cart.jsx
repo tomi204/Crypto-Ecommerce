@@ -153,10 +153,7 @@ const Cart = () => {
                   -
                 </button>
                 <h3 className="contador">{item.qty}</h3>
-                <h3>
-                  <FaEthereum />
-                  {item.qty * item.cover}
-                </h3>
+
                 <button className="eliminar" onClick={() => deleteQty(item.id)}>
                   eliminar producto
                 </button>

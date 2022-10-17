@@ -160,19 +160,20 @@ const Cart = () => {
               </div>
             ))}
             <div className="buy-div">
-              <h4>
-                total: <FaEthereum />
-                {calcTotal(totalQtty).toFixed(2)}
-              </h4>
               <br />
-
-              <button className="btn-buy" onClick={sendTransaction}>
-                comprar
-              </button>
             </div>
           </>
         )}
       </Container>
+      <div style={({ display: "list-item" }, { listStyle: "none" })}>
+        <h4>
+          total: <FaEthereum />
+          {calcTotal(totalQtty).toFixed(2)}
+        </h4>
+        <button className="btn-buy" onClick={sendTransaction}>
+          comprar
+        </button>
+      </div>
     </div>
   );
 };

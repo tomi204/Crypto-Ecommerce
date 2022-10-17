@@ -61,7 +61,7 @@ const Cart = () => {
     })),
     total: calcTotal(),
   };
-
+  console.log(count);
   //alchemy
 
   // const settings = {
@@ -86,7 +86,6 @@ const Cart = () => {
     },
     onSuccess: () => alert("Transaction successful"),
   });
-  console.log(totalQtty);
 
   return (
     <div className="cartTittle">
@@ -137,7 +136,10 @@ const Cart = () => {
                   -
                 </button>
                 <h2 className="contador">{item.qty}</h2>
-                <h2>${item.qty * item.cover}</h2>
+                <h2>
+                  <FaEthereum />
+                  {item.qty * item.cover}
+                </h2>
                 <button className="eliminar" onClick={() => deleteQty(item.id)}>
                   eliminar producto
                 </button>

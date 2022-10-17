@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { GetAll } from "../Api/api";
 import { useContext } from "react";
 import { DataContext } from "../context";
+import { FaEthereum } from "react-icons/fa";
 const ProductDetails = () => {
   // datacontext from context and get data from api
   const { blogs, setBlogs, addToCart, decreaseQty, CartItem } =
@@ -49,7 +50,10 @@ const ProductDetails = () => {
                 <h1>{item.title}</h1>
                 <h3 className="desc-id">{item.desc}</h3>
                 <br></br>
-                <h2> ${item.price} ether</h2>
+                <h2>
+                  <FaEthereum />
+                  {item.price}{" "}
+                </h2>
                 <h2>Hay {item.stock} en stock</h2>
                 <br />
                 <button

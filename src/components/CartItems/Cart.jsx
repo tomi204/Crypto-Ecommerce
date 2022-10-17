@@ -5,7 +5,7 @@ import { isRouteErrorResponse, Link } from "react-router-dom";
 import { DataContext } from "../context";
 import { useAccount, useSendTransaction } from "wagmi";
 import { ethers } from "ethers";
-
+import { FaEthereum } from "react-icons/fa";
 import { Network, Alchemy } from "alchemy-sdk";
 const Cart = () => {
   // data context from context
@@ -144,7 +144,10 @@ const Cart = () => {
               </div>
             ))}
             <div className="buy-div">
-              <h3>total: ${calcTotal(totalQtty)}</h3>
+              <h3>
+                total: <FaEthereum />
+                {calcTotal(totalQtty)}
+              </h3>
               <br />
 
               <button className="btn-buy" onClick={sendTransaction}>

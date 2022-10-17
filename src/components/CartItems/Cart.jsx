@@ -116,7 +116,7 @@ const Cart = () => {
           <>
             {CartItem.map((item) => (
               <div className="item-products" key={item}>
-                <h3>{item.tittle}</h3>
+                <h4>{item.tittle}</h4>
                 <img src={item.desc} alt="" className="cart-Item-Image" />
                 <br></br>
 
@@ -152,21 +152,21 @@ const Cart = () => {
                 >
                   -
                 </button>
-                <h2 className="contador">{item.qty}</h2>
-                <h2>
+                <h3 className="contador">{item.qty}</h3>
+                <h3>
                   <FaEthereum />
                   {item.qty * item.cover}
-                </h2>
+                </h3>
                 <button className="eliminar" onClick={() => deleteQty(item.id)}>
                   eliminar producto
                 </button>
               </div>
             ))}
             <div className="buy-div">
-              <h3>
+              <h4>
                 total: <FaEthereum />
                 {calcTotal(totalQtty)}
-              </h3>
+              </h4>
               <br />
 
               <button className="btn-buy" onClick={sendTransaction}>

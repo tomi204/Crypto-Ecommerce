@@ -165,7 +165,7 @@ const Cart = () => {
             <div className="buy-div">
               <h4>
                 total: <FaEthereum />
-                {calcTotal(totalQtty)}
+                {calcTotal(totalQtty).toFixed(2)}
               </h4>
               <br />
 

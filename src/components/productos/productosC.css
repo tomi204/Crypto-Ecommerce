@@ -21,6 +21,7 @@
   align-items: flex-start;
   padding: 0 10px;
   margin: 0 auto;
+  margin-top: 20px;
   position: relative;
   animation: fade-in 0.8s ease-in forwards;
 }

@@ -91,7 +91,7 @@ const ProductDetails = () => {
 
                 {/* // {goToCart ? */}
                 <Link to={"/Cart"} className="link-cart">
-                  Ir al carrito
+                  Carrito
                 </Link>
               </div>
             );

@@ -120,8 +120,10 @@
   color: black;
   cursor: pointer;
   font-weight: 900;
+  font-size: 15px;
   border-color: white;
   border-radius: 15px;
+  margin-left: 15px;
 }
 @media (max-width: 550px) {
   .product-d {

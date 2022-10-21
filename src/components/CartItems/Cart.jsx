@@ -101,7 +101,7 @@ const Cart = () => {
         ethers.utils.parseEther(calcTotal(totalQtty())?.toString()) || null,
     },
     onSuccess: () => mostrarAlert(),
-    onError: () => mostrarAlertError(),
+    onError: (error) => mostrarAlertError(error),
   });
 
   return (

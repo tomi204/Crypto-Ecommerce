@@ -86,10 +86,10 @@
 
 @media (max-width: 980px) {
   .containerProds {
-    width: 50%;
+    width: 100%;
     display: list-item;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     list-style: none;
   }

@@ -8,19 +8,29 @@ function Navbar() {
     <nav className="navbar">
       <ul className="ul-n">
         <NavLink to={"./"}>
-          <li>INICIO</li>
+          <li className="li-inicio">INICIO</li>
         </NavLink>
         <NavLink to={"./Productos"}>
-          <li>PRODUCTOS</li>
+          <li className="li-inicio">PRODUCTOS</li>
         </NavLink>
 
         <NavLink to={"./Cart"}>
-          <li>
+          <li className="li-inicio">
             <FaShoppingCart></FaShoppingCart>
           </li>
         </NavLink>
         <li>
-          <ConnectButton showBalance={false} />
+          <ConnectButton
+            showBalance={false}
+            accountStatus={{
+              smallScreen: "avatar",
+              largeScreen: "full",
+            }}
+            chainStatus={{
+              smallScreen: "icon",
+              largeScreen: "full",
+            }}
+          />
         </li>
       </ul>
     </nav>

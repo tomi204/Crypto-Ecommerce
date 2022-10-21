@@ -14,31 +14,46 @@
 }
 .ul-n {
   width: 100%;
-  height: 30px;
+  height: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 li {
   list-style: none;
+  list-style: none;
   font-size: 15px;
   font-weight: 900;
+  border-radius: 20px;
+}
+.li-inicio {
+  list-style: none;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 20px;
 }
 a {
   width: 20%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #24262a;
   border-radius: 10px;
   font-weight: 900;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+.li-inicio:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
 @media (max-width: 550px) {
+  .li-inicio {
+    list-style: none;
+    font-size: 10px;
+  }
   li {
     list-style: none;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .ul-n {

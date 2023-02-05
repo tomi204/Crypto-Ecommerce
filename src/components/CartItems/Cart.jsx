@@ -110,7 +110,9 @@ const Cart = () => {
         {CartItem.length == 0 ? (
           <div className="vacio">
             <h2>Tu carrito esta vacio</h2>
+            <br />
             <Link to={"../Productos"}>Ir a productos</Link>
+            <br />
           </div>
         ) : (
           <>
@@ -165,11 +167,14 @@ const Cart = () => {
           </>
         )}
       </Container>
+
       <div style={({ display: "list-item" }, { listStyle: "none" })}>
+        <br />
         <h4>
           total: <FaEthereum />
           {calcTotal(totalQtty).toFixed(2)}
         </h4>
+        <br />
         <button className="btn-buy" onClick={sendTransaction}>
           comprar
         </button>

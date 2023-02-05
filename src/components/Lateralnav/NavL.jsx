@@ -1,6 +1,12 @@
 import React from "react";
 import "./NavL.css";
-import { FaInstagram, FaTiktok, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTiktok,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 import { getAll } from "../Api/api";
 
 // navbar lateral with links to social media

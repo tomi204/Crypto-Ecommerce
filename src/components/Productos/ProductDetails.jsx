@@ -45,17 +45,17 @@ const ProductDetails = () => {
           .map((item) => {
             return (
               <div className="list-item" key={item.id}>
-                <br></br>
+                <br />
                 <img src={item.cover} alt="" className="img-details" />
-                <h1>{item.title}</h1>
+                <h2>{item.title}</h2>
                 <h3 className="desc-id">{item.desc}</h3>
-                <br></br>
-                <h2>
+                <br />
+                <h3>
                   <FaEthereum />
                   {item.price}{" "}
-                </h2>
+                </h3>
                 <h2>Hay {item.stock} en stock</h2>
-                <br />
+
                 <button
                   className="addCart-D"
                   onClick={() =>
@@ -72,7 +72,7 @@ const ProductDetails = () => {
                 >
                   +
                 </button>
-                <button
+                {/* <button
                   className="btn-e"
                   onClick={() =>
                     decreaseProduct(
@@ -87,11 +87,10 @@ const ProductDetails = () => {
                   }
                 >
                   -
-                </button>
+                </button> */}
 
-                {/* // {goToCart ? */}
                 <Link to={"/Cart"} className="link-cart">
-                  Carrito
+                  Ir al carrito
                 </Link>
               </div>
             );
